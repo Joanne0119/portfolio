@@ -26,7 +26,7 @@ const Navbar = () => {
     <header className='fix-top-0 fix-right-0 fix-left-0 z-50 bg-black-90'>
         <div className='max-w-7xl mx-auto'>
             <div className='flex justify-between'>
-                <a href='/' className='text-black-400 font-bold text-xl hover:text-gray transition-colors'>
+                <a href='/' className='text-sky-950 font-bold text-xl hover:text-sky-600 transition-colors'>
                     Joanne
                 </a>
                 <button onClick={() => toogleMenu()} className="text-black-400 hover:text-white focus:outline-none sm:hidden flex"

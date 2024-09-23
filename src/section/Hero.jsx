@@ -5,6 +5,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import { calculateSizes } from '../constant'
 import { useMediaQuery } from 'react-responsive'
 import  CanvasLoader  from '../components/CanvasLoader.jsx'
+import HeroCamera from '../components/HeroCamera.jsx'
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })
@@ -27,11 +28,12 @@ const Hero = () => {
             <Canvas className='w-full h-full'>
                 <Suspense fallback={<CanvasLoader />}>
                     <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                    
-                    <CodingAvatar
-                        scale={sizes.deskScale} 
-                        position={sizes.deskPosition} 
-                    />
+                    <HeroCamera isMobile={isMobile}>
+                        <CodingAvatar
+                            scale={sizes.deskScale} 
+                            position={sizes.deskPosition} 
+                        />
+                    </HeroCamera>
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={2}/>
                 </Suspense>

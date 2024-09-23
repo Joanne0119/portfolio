@@ -23,7 +23,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); //isOpen is a variable and setIsOpen is a function to change the isOpen state
     const toogleMenu = () => setIsOpen((preIsOpen) => !preIsOpen);
   return (
-    <header className='fix-top-0 fix-right-0 fix-left-0 z-50 bg-black-90'>
+    <header className='fix-top-0 fix-right-0 fix-left-0 z-50 '>
         <div className='max-w-7xl mx-auto'>
             <div className='flex justify-between'>
                 <a href='/' className='text-sky-950 font-bold text-xl hover:text-sky-600 transition-colors'>

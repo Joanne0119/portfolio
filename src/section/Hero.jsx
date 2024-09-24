@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import CodingAvatar from '../components/CodingAvatar'
 import { PerspectiveCamera } from '@react-three/drei'
-import { calculateSizes } from '../constant'
+import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import  CanvasLoader  from '../components/CanvasLoader.jsx'
 import HeroCamera from '../components/HeroCamera.jsx'
@@ -30,8 +30,8 @@ const Hero = () => {
                     <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                     <HeroCamera isMobile={isMobile}>
                         <CodingAvatar
-                            scale={sizes.deskScale} 
-                            position={sizes.deskPosition} 
+                            scale={sizes.avatarScale} 
+                            position={sizes.avatarPosition} 
                         />
                     </HeroCamera>
                         <ambientLight intensity={1} />

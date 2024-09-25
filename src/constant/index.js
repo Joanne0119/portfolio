@@ -65,6 +65,7 @@ export const navLinks = [
       starScale: isSmall ? 0.8 : isMobile ? 0.9 : 1.0,
       hatScale: isSmall ? 3.8 : isMobile ? 4.4 : 4.6,
       diamondScale: isSmall ? 1.6 : isMobile ? 1.8 : 2.0,
+      macbookScale: isSmall ? 20.6 : isMobile ? 20.8 : 21.0,
       cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
       reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
       ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],

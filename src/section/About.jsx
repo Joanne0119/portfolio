@@ -37,18 +37,20 @@ const About = () => {
     const skillRef = useRef(null)
     const eduRef = useRef(null)
     const expRef = useRef(null)
+    const aboutRef = useRef(null)
     useEffect(() => {
         const skill = skillRef.current;
         const edu = eduRef.current;
         const exp = expRef.current;
+        const about = aboutRef.current;
 
         gsap.fromTo(skill, 
             { x: -250, opacity: 0.5 },  
             { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: skill,
-                start: 'top bottom-=200',
-                end: 'bottom bottom-=180',
+                // start: 'top bottom-=200',
+                // end: 'bottom bottom-=180',
                 scrub: true,
               }
             }
@@ -59,8 +61,8 @@ const About = () => {
             { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: edu,
-                start: 'top bottom-=200',
-                end: 'bottom bottom-=180',
+                // start: 'top bottom-=200',
+                // end: 'bottom bottom-=180',
                 scrub: true,
               }
             }
@@ -71,6 +73,18 @@ const About = () => {
             { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: exp,
+                // start: 'top bottom-=200',
+                // end: 'bottom bottom-=180',
+                scrub: true,
+              }
+            }
+          )
+
+          gsap.fromTo(about, 
+            { y: -100 },  
+            { y: 0, duration: 1.5, ease: 'power3.out', 
+              scrollTrigger: {
+                trigger: about,
                 start: 'top bottom-=200',
                 end: 'bottom bottom-=180',
                 scrub: true,
@@ -81,12 +95,12 @@ const About = () => {
 
 
     return (
-        <section>
+        <section ref={aboutRef} className='bg-white py-10 px-5 rounded-3xl mt-10'>
         <h1 className='head-text'>About</h1>
         <div className='grid grid-cols-1 p-10'>
             <div className='flex gap-8 border items-center'>
-                <div className='border h-auto max-h-60 min-h-32 min-w-32'>
-                    <img className='rounded-lg w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me.png' alt=''/>
+                <div className='border h-auto max-h-60 min-h-32 min-w-32 bg-gray-200 rounded-lg overflow-hidden'>
+                    <img className='rounded-lg w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me_nobg.png' alt=''/>
                 </div>
                 <div className='inline-flex gap-5'>
                     <p><span className='font-medium'>Name:</span> Joanne Liu</p>
@@ -94,7 +108,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div >
+            <div className='sm:ml-48'>
                 <div ref={skillRef} className='skill'>
                     <div className='border flex'>
                         <Canvas className='w-full h-full border min-w-12 max-w-20 inline'>

@@ -6,6 +6,7 @@ import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import  CanvasLoader  from '../components/CanvasLoader.jsx'
 import HeroCamera from '../components/HeroCamera.jsx'
+import Cube from '../components/Cube.jsx'
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })
@@ -37,6 +38,12 @@ const Hero = () => {
                             position={sizes.avatarPosition} 
                         />
                     </HeroCamera>
+                    <group>
+                        <Cube 
+                            scale={sizes.cubeScale} 
+                            position={sizes.cubePosition} 
+                        />
+                    </group>
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={2}/>
                 </Suspense>

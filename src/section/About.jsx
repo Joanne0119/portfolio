@@ -95,7 +95,7 @@ const About = () => {
 
 
     return (
-        <section ref={aboutRef} className='bg-white py-10 px-5 rounded-3xl mt-10'>
+        <section ref={aboutRef} className='bg-white py-10 px-5 rounded-3xl mt-10 shadow-xl overflow-hidden'>
         <h1 className='head-text'>About</h1>
         <div className='grid grid-cols-1 p-10'>
             <div className='flex gap-8 border items-center'>

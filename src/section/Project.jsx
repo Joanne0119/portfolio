@@ -1,9 +1,13 @@
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Macbook from '../components/Macbook'
 import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
+import gsap from 'gsap'
+import  { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Project = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })
@@ -11,6 +15,23 @@ const Project = () => {
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 })
 
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
+    const projectRef = useRef(null)
+    useEffect(() => {
+        const project = projectRef.current;
+
+
+          gsap.fromTo(project, 
+            { y: -100 },  
+            { y: 0, duration: 1.5, ease: 'power3.out', 
+              scrollTrigger: {
+                trigger: project,
+                start: 'top bottom-=200',
+                end: 'bottom bottom-=180',
+                scrub: true,
+              }
+            }
+          );
+    }, []) //再試試
     return (
         <section>
             <h1 className='head-text'>Projects</h1>

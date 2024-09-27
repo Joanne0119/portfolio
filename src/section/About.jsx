@@ -46,48 +46,48 @@ const About = () => {
 
         gsap.fromTo(skill, 
             { x: -250, opacity: 0.5 },  
-            { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
+            { x: 0, opacity: 1, duration: 3, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: skill,
                 // start: 'top bottom-=200',
                 // end: 'bottom bottom-=180',
-                scrub: true,
+                scrub: 1,
               }
             }
           )
 
           gsap.fromTo(edu, 
             { x: -250, opacity: 0.5 },  
-            { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
+            { x: 0, opacity: 1, duration: 3, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: edu,
                 // start: 'top bottom-=200',
                 // end: 'bottom bottom-=180',
-                scrub: true,
+                scrub: 1,
               }
             }
           )
 
           gsap.fromTo(exp, 
             { x: -250, opacity: 0.5 },  
-            { x: 0, opacity: 1, duration: 5, ease: 'power1.out', 
+            { x: 0, opacity: 1, duration: 3, ease: 'power1.out', 
               scrollTrigger: {
                 trigger: exp,
                 // start: 'top bottom-=200',
                 // end: 'bottom bottom-=180',
-                scrub: true,
+                scrub: 1,
               }
             }
           )
 
           gsap.fromTo(about, 
-            { y: -100 },  
-            { y: 0, duration: 1.5, ease: 'power3.out', 
+            { y: 100 },  
+            { y: 0, duration: 1, ease: 'power3.out', 
               scrollTrigger: {
                 trigger: about,
-                start: 'top bottom-=200',
+                start: 'top-=150 bottom-=100',
                 end: 'bottom bottom-=180',
-                scrub: true,
+                scrub: 1,
               }
             }
           );
@@ -95,11 +95,11 @@ const About = () => {
 
 
     return (
-        <section ref={aboutRef} className='bg-white py-10 px-5 rounded-3xl mt-10 shadow-xl overflow-hidden'>
+        <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-3xl overflow-hidden mx-10'>
         <h1 className='head-text'>About</h1>
         <div className='grid grid-cols-1 p-10'>
-            <div className='flex gap-8 border items-center'>
-                <div className='border h-auto max-h-60 min-h-32 min-w-32 bg-gray-200 rounded-lg overflow-hidden'>
+            <div className='flex gap-8 items-center'>
+                <div className='h-auto max-h-60 min-h-32 min-w-32 bg-gray-200 rounded-lg overflow-hidden'>
                     <img className='rounded-lg w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me_nobg.png' alt=''/>
                 </div>
                 <div className='inline-flex gap-5'>
@@ -110,8 +110,8 @@ const About = () => {
 
             <div className='sm:ml-48'>
                 <div ref={skillRef} className='skill'>
-                    <div className='border flex'>
-                        <Canvas className='w-full h-full border min-w-12 max-w-20 inline'>
+                    <div className='flex'>
+                        <Canvas className='w-full h-full min-w-12 max-w-20 inline'>
                             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                             <Star
                                 scale={sizes.starScale}
@@ -121,15 +121,15 @@ const About = () => {
                         
                         </Canvas>
                         
-                        <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal border pr-20'>
+                        <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal  pr-20'>
                             Skills
                         </p>
                     </div>
                     <AboutItems aboutItems={aboutSkills}/>
             </div>
             <div ref={eduRef}>
-                <div className='border flex'>
-                    <Canvas className='w-full h-full border min-w-12 max-w-20 inline'>
+                <div className=' flex'>
+                    <Canvas className='w-full h-full  min-w-12 max-w-20 inline'>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                         <GraduationHat 
                             scale={sizes.hatScale}
@@ -139,15 +139,15 @@ const About = () => {
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
                     
                     </Canvas>
-                    <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal border'>
+                    <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
                         Education
                     </p>
                 </div>
                 <AboutItems aboutItems={aboutEducation}/>
             </div>
             <div ref={expRef}>
-                <div className='border flex'>
-                    <Canvas className='w-full h-full border min-w-12 max-w-20 inline'>
+                <div className=' flex'>
+                    <Canvas className='w-full h-full  min-w-12 max-w-20 inline'>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                         <Diamond 
                             scale={sizes.diamondScale}
@@ -156,7 +156,7 @@ const About = () => {
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
                     
                     </Canvas>
-                    <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal border'>
+                    <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
                         Experience
                     </p>
                 </div>

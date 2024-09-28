@@ -58,6 +58,49 @@ export const navLinks = [
     }
   ];
 
+  export const projectInfo = [
+    {
+        id: 1,
+        name: 'Wyan Music',
+        skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap5', 'Firebase'],
+        description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
+        github: 'https://github.com/Joanne0119/music-player',
+        netlify: 'https://joanne0119.github.io/music-player/index.html',
+        texture: '../public/projects/WyanMusicDemo.mp4',
+        macbook: true
+    },
+    {
+        id: 2,
+        name: 'Market Duck',
+        skills: ['SwiftUI', 'Google Maps API'],
+        description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
+        github: 'https://github.com/Joanne0119/Market-Duck',
+        netlify: 'https://joanne0119.github.io/music-player/index.html',
+        texture: '../public/projects/WyanMusicDemo.mp4',
+        macbook: false
+    },
+    {
+        id: 3,
+        name: 'Porfolio',   
+        skills: ['HTML', 'TailwindCSS', 'JavaScript', 'React', 'Three.js'],
+        description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
+        github: 'https://github.com/Joanne0119/portfolio',
+        netlify: 'https://joanne0119.github.io/music-player/index.html',
+        texture: '../public/projects/WyanMusicDemo.mp4',
+        macbook: true
+    },
+    {
+        id: 4,
+        name: 'enSPIRE',   
+        skills: ['SwiftUI'],
+        description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
+        github: 'https://github.com/dddCrazy87/enSPIRE',
+        netlify: 'https://joanne0119.github.io/music-player/index.html',
+        texture: '../public/projects/WyanMusicDemo.mp4',
+        macbook: false
+    }
+  ]
+
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
       avatarScale: isSmall ? 1.2 : isMobile ? 1.6 : 1.7,

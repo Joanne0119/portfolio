@@ -21,7 +21,7 @@ const Macbook = (props) => {
    });
 
   const { nodes, materials } = useGLTF('../public/models/computer.glb')
-  const txt = useVideoTexture('../public/projects/WyanMusicDemo.mp4')
+  const txt = useVideoTexture(props.texture ? props.texture : '../public/projects/test.mp4')
   return (
     <group {...props} dispose={null} ref={macRef}>
       <group position={[0, 0.294, -0.604]} rotation={[-0.247, 0, 0]} scale={[1, 1.073, 1]}>

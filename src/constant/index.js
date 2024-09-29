@@ -105,6 +105,8 @@ export const navLinks = [
     return {
       avatarScale: isSmall ? 1.2 : isMobile ? 1.6 : 1.7,
       avatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],
+      hiAvatarScale: isSmall ? 2.3 : isMobile ? 2.6 : 2.8,
+      hiAvatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],
       starScale: isSmall ? 0.8 : isMobile ? 0.9 : 1.0,
       hatScale: isSmall ? 3.8 : isMobile ? 4.4 : 4.6,
       diamondScale: isSmall ? 1.6 : isMobile ? 1.8 : 2.0,

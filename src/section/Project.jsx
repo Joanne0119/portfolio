@@ -88,9 +88,9 @@ const Project = () => {
           );
     }, []) 
     return (
-        <section id='projects' ref={projectRef} className='mt-16 mx-10 '>
+        <section id='projects' ref={projectRef} className='mt-16 mx-10'>
             <h1 className='head-text'>Projects</h1>
-            <div className='grid sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 h-96 py-8'>
+            <div className='grid sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 py-8'>
                 {/* <Leva /> */}
                 <Canvas className='w-full h-full min-h-96 min-w-50 ' camera={{ fov: 75, position: [-10, 45, 20]}}>
                     <Suspense fallback={<CanvasLoader />}>

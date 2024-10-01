@@ -18,10 +18,12 @@ body {
   padding: 1rem
 }
 
+.card {
+  position: sticky;
+  padding-top: 2rem;
+}
+
 @layer utilities {
-  .c-space {
-    @apply sm:px-10 px-5;
-  }
 
   .head-text {
     @apply inline xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-bold text-sky-950 !leading-normal;

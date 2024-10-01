@@ -25,7 +25,7 @@ const Hero = () => {
                     A Creative Programmer and Designer
                 </p>
                 <button className='inline mt-8 sm:text-2xl text-1xl text-white bg-sky-950 px-5 py-2 rounded-full font-generalsans font-medium '>
-                    Contact Me
+                    <a href='#contact'>Get in touch</a>
                 </button>
             </div>
             <div className=' min-w-52'>

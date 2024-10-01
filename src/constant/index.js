@@ -67,7 +67,8 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/music-player',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: '../public/projects/WyanMusicDemo.mp4',
-        macbook: true
+        macbook: true,
+        background: 'linear-gradient(to bottom right, white , rgb(203 213 225))'
     },
     {
         id: 2,
@@ -77,7 +78,8 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/Market-Duck',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: '../public/projects/WyanMusicDemo.mp4',
-        macbook: false
+        macbook: false,
+        background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
     {
         id: 3,
@@ -87,7 +89,8 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/portfolio',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: '../public/projects/WyanMusicDemo.mp4',
-        macbook: true
+        macbook: true,
+        background: 'linear-gradient(to bottom right, white , rgb(239 246 255))'
     },
     {
         id: 4,
@@ -97,7 +100,8 @@ export const navLinks = [
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: '../public/projects/WyanMusicDemo.mp4',
-        macbook: false
+        macbook: false,
+        background: 'rgb(255 255 255)'
     }
   ]
 

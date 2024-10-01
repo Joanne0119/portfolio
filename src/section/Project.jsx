@@ -26,9 +26,9 @@ const Project = () => {
             }
           );
     }, []) 
-    
+
     return (
-        <section id='projects relative' className='mt-16 mx-10' ref={projectRef}>
+        <section id='projects relative' className='mt-16 mx-20' ref={projectRef}>
             <h1 className='head-text sticky top-0'>Projects</h1>
             
             <div >

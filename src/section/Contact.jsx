@@ -14,7 +14,7 @@ const Contact = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className='my-10 mx-10' id="contact">
+        <section className='my-10 mx-20' id="contact">
         <h1 className='head-text'>Contact</h1>
         <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 py-8'>
             <div className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden mx-10 my-5 min-w-60'>

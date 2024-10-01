@@ -90,7 +90,7 @@ export const navLinks = [
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: '../public/projects/WyanMusicDemo.mp4',
         macbook: true,
-        background: 'linear-gradient(to bottom right, white , rgb(239 246 255))'
+        background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
     {
         id: 4,
@@ -107,7 +107,7 @@ export const navLinks = [
 
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-      avatarScale: isSmall ? 1.2 : isMobile ? 1.6 : 1.7,
+      avatarScale: isSmall ? 1.2 : isMobile ? 1.5 : 1.7,
       avatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],
       hiAvatarScale: isSmall ? 2.3 : isMobile ? 2.6 : 2.8,
       hiAvatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],

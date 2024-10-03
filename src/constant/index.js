@@ -77,7 +77,7 @@ export const navLinks = [
         description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
         github: 'https://github.com/Joanne0119/Market-Duck',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
-        texture: '../public/projects/WyanMusicDemo.mp4',
+        texture: '../public/projects/MarketDuckDemo.mov',
         macbook: false,
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
@@ -115,10 +115,8 @@ export const navLinks = [
       hatScale: isSmall ? 3.8 : isMobile ? 4.4 : 4.6,
       diamondScale: isSmall ? 1.6 : isMobile ? 1.8 : 2.0,
       macbookScale: isSmall ? 4 : isMobile ? 7.4 : 7.6,
+      phoneScale: isSmall ? 5 : isMobile ? 11.5 : 12,
       cubeScale: isSmall ? 0.3 : isMobile ? 0.5 : 0.8,
       cubePosition: isSmall ? [2.8, -0.5, 0] : isMobile ? [3.6, -1, 0] : isTablet ? [4.6, -2.6, 0] : [4.6, -2.6, 0],
-      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
-    };
+    }
 }

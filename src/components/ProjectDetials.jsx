@@ -25,7 +25,7 @@ const ProjectDetials = ({currentProject}) => {
         style={{top: `calc(10% + ${currentProject.id * 15 }px) `, background: `${currentProject.background} ` }}
     >
         {currentProject.macbook ? (
-            <Canvas className='w-full h-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
+            <Canvas className='w-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
                 <Suspense fallback={<CanvasLoader />}>
                 <PerspectiveCamera makeDefault fov={30} position={[0, 0, 30]} />
                     <Macbook 
@@ -41,7 +41,7 @@ const ProjectDetials = ({currentProject}) => {
                 <OrbitControls enableZoom={false} enablePan={true} maxPolarAngle={Math.PI / 2} />
             </Canvas>
         ):(
-            <Canvas className='w-full h-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
+            <Canvas className='w-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
                 <Suspense fallback={<CanvasLoader />}>
                 <PerspectiveCamera makeDefault fov={30} position={[0, 0, 30]} />
                     <Cellphone 
@@ -63,7 +63,7 @@ const ProjectDetials = ({currentProject}) => {
                 <h3 className='text-3xl font-generalsans font-medium text-sky-950 py-5'>{currentProject.name}</h3>
                 <ul className='flex gap-2 flex-wrap'>
                 </ul>
-                <p className=' text-base text-sky-800 font-generalsans font-medium  py-5 pb-12'>
+                <p className=' text-base text-sky-800 font-generalsans font-medium  py-5'>
                     {currentProject.description}
                 </p>
             </div>

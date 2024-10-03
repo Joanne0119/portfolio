@@ -36,14 +36,15 @@ const Hero = () => {
                         <CodingAvatar
                             scale={sizes.avatarScale} 
                             position={sizes.avatarPosition} 
+                            roatation={[0,-2,0]}
                         />
                     </HeroCamera>
-                    <group>
+                    {/* <group>
                         <Cube 
                             scale={sizes.cubeScale} 
                             position={sizes.cubePosition} 
                         />
-                    </group>
+                    </group> */}
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={2}/>
                 </Suspense>

@@ -99,7 +99,7 @@ export const navLinks = [
         description: 'A music streaming app. User can search songs and add them to playlist. User can also upload their own songs.',    
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
-        texture: '../public/projects/WyanMusicDemo.mp4',
+        texture: '../public/projects/enSPIREDemo.mov',
         macbook: false,
         background: 'rgb(255 255 255)'
     }
@@ -108,14 +108,14 @@ export const navLinks = [
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
       avatarScale: isSmall ? 1.2 : isMobile ? 1.5 : 1.7,
-      avatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],
+      avatarPosition: isMobile ? [0, 2, 0] : [0, -2, 0],
       hiAvatarScale: isSmall ? 2.3 : isMobile ? 2.6 : 2.8,
       hiAvatarPosition: isMobile ? [0, -0.8, 0] : [0, -2.3, 0],
       starScale: isSmall ? 0.8 : isMobile ? 0.9 : 1.0,
       hatScale: isSmall ? 3.8 : isMobile ? 4.4 : 4.6,
       diamondScale: isSmall ? 1.6 : isMobile ? 1.8 : 2.0,
-      macbookScale: isSmall ? 4 : isMobile ? 7.4 : 7.6,
-      phoneScale: isSmall ? 5 : isMobile ? 11.5 : 12,
+      macbookScale: isSmall ? 4 : isMobile ? 7 : 7.6,
+      phoneScale: isSmall ? 5 : isMobile ? 10 : 12,
       cubeScale: isSmall ? 0.3 : isMobile ? 0.5 : 0.8,
       cubePosition: isSmall ? [2.8, -0.5, 0] : isMobile ? [3.6, -1, 0] : isTablet ? [4.6, -2.6, 0] : [4.6, -2.6, 0],
     }

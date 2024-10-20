@@ -52,21 +52,23 @@ const About = () => {
 
 
     return (
-        <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden mx-20'>
+        <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
         <h1 className='head-text'>About</h1>
-        <div className='grid grid-cols-1 p-10'>
-            <div className='flex gap-8 items-center'>
-                <div className='h-auto max-h-60 min-h-32 min-w-32 bg-gray-200 rounded-lg overflow-hidden'>
-                    <img className='rounded-lg w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me_nobg.png' alt=''/>
+        <div className='grid grid-cols-1 sm:p-8'>
+            <div className='flex sm:flex-row flex-col gap-8 items-center'>
+                <div className='h-auto max-h-60 min-h-32 min-w-32 rounded-lg overflow-hidden'>
+                    <img className='rounded-xl w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me.png' alt=''/>
                 </div>
                 <div className='inline-flex gap-5'>
-                    <p><span className='font-medium'>Name:</span> Joanne Liu</p>
-                    <p><span className='font-medium'>Age:</span> 21</p>
+                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold'><span className='font-medium'>Name:</span> Cheng En, Liu (Joanne)</p>
+                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold'><span className='font-medium'>Age:</span> 21</p>
                 </div>
             </div>
-
+            <div className='sm:py-10 sm:px-6 py-5 px-2 text-balance xl:text-lg md:text-lg sm:text-md text-md font-generalsans text-left text-sky-950'>
+                I am Joanne, a proactive individual with <span className='font-bold'>over 3 years of web development experience, specializing in front-end technologies</span> like JavaScript,React and CSS. I enjoy <span className='font-bold'>building interactive websites and apps.</span> I am currently expanding my skills in back-end and AI to bring more innovation to my projects.
+            </div>
         <div>
-        <div className='sm:ml-48'>
+        <div className='sm:ml-10'>
             <div  className='skill'>
                 <div className='flex'>
                     <Canvas className='w-full h-full min-w-12 max-w-20 inline'>

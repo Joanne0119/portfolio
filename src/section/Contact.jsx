@@ -33,7 +33,7 @@ const Contact = () => {
     const { submit: onSubmit } = useWeb3Forms({
       access_key: accessKey,
       settings: {
-        from_name: "Porfolio User Messages",
+        from_name: "Porfolio Contact Form",
         subject: "New Contact Message from your Website",
         // ... other settings
       },

@@ -62,6 +62,11 @@ const ProjectDetials = ({currentProject}) => {
             <div >
                 <h3 className='text-3xl font-generalsans font-medium text-sky-950 py-5'>{currentProject.name}</h3>
                 <ul className='flex gap-2 flex-wrap'>
+                    {currentProject.skills.map((tag, index) => (
+                        <li key={index} className='sm:text-sm md:text-sm text-xs text-base text-sky-800 font-generalsans font-medium  py-1 border-2 border-sky-800 rounded-3xl px-3'>
+                            {tag}
+                        </li>
+                    ))}
                 </ul>
                 <p className=' text-base text-sky-800 font-generalsans font-medium  py-5'>
                     {currentProject.description}

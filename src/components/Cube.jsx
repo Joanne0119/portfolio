@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
 const Cube = (props) => {
-  const { nodes, materials } = useGLTF('../public/models/Cube.glb')
+  const { nodes, materials } = useGLTF('/models/Cube.glb')
   const cubeRef = useRef();
 
   useGSAP(() => {
@@ -33,6 +33,6 @@ const Cube = (props) => {
   )
 }
 
-useGLTF.preload('../public/models/Cube.glb')
+useGLTF.preload('/models/Cube.glb')
 
 export default Cube

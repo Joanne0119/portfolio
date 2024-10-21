@@ -64,10 +64,10 @@ const Contact = () => {
     }, [showSuccessMessage]);
 
     return (
-        <section className='my-10 mx-20' id="contact">
+        <section className='my-10 md:mx-20 mx-2' id="contact">
         <h1 className='head-text'>Contact</h1>
         <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 py-8'>
-            <div className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden mx-10 my-5 min-w-60'>
+            <div className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-10 mx-4 my-5 min-w-60'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='grid grid-cols-1 gap-5 items-center'>
                         <div className='field'>
@@ -87,17 +87,17 @@ const Contact = () => {
                         <ul className='inline-flex mt-8 items-center'>
                             <li>
                                 <a href='mailto:joanneliu0119@gmail.com' target='_blank' >
-                                    <img src={`${process.env.PUBLIC_URL}/assets/mail.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src='/assets/mail.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
                                 <a href='https://github.com/Joanne0119' target='_blank' >
-                                    <img src={`${process.env.PUBLIC_URL}/assets/github_black.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src='/assets/github_black.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
                                 <a href='https://www.instagram.com/joanneliu0119/' target='_blank' >
-                                    <img src={`${process.env.PUBLIC_URL}/assets/instagram.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src='/assets/instagram.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             
@@ -130,7 +130,7 @@ const Contact = () => {
                 </form>
             </div>
             <div className=' min-w-52'  onPointerOver={() => setAnimationName('Hi')} onPointerOut={() => setAnimationName('Idel')}>
-                <Canvas className='w-full h-full min-w-52'>
+                <Canvas className='w-full h-full min-h-96 min-w-52'>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                             <HiAvatar

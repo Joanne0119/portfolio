@@ -3,12 +3,14 @@ import { projectInfo} from '../constant/index.js'
 import gsap from 'gsap'
 import  { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ProjectDetials from '../components/ProjectDetials.jsx'
+import { useMediaQuery } from 'react-responsive'
 
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Project = () => {
     const projectRef = useRef(null)
+    const isMobile = useMediaQuery({ maxWidth: 768 })
 
     useEffect(() => {
         const project = projectRef.current;
@@ -25,11 +27,11 @@ const Project = () => {
               }
             }
           );
-    }, []) 
+    }, [])
 
     return (
-        <section id='projects' className='mt-16 mx-20 relative' ref={projectRef}>
-            <h1 className='head-text sticky top-0'>Projects</h1>
+        <section id='projects' className='mt-4 sm:mx-16 mx-4 relative' ref={projectRef}>
+            <h1 className={`head-text ${isMobile ? 'relative' : 'sticky'} top-0`}>Projects</h1>
             
             <div >
             {

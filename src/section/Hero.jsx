@@ -6,7 +6,6 @@ import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import  CanvasLoader  from '../components/CanvasLoader.jsx'
 import HeroCamera from '../components/HeroCamera.jsx'
-import Cube from '../components/Cube.jsx'
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })

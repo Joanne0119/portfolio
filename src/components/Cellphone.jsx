@@ -18,7 +18,7 @@ const Cellphone = (props) => {
         yoyo: true,
       })
    });
-   const txt = useVideoTexture(props.texture ? props.texture : '../public/projects/test.mov')
+   const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mov')
    
   const { nodes, materials } = useGLTF('/models/phone.glb')
   return (

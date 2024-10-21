@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
 const Diamond = (props) => {
-  const { nodes, materials } = useGLTF('../public/models/Diamond.glb')
+  const { nodes, materials } = useGLTF('/models/Diamond.glb')
 
   const diamondRef = useRef();
 
@@ -33,6 +33,6 @@ const Diamond = (props) => {
   )
 }
 
-useGLTF.preload('../public/models/Diamond.glb')
+useGLTF.preload('/models/Diamond.glb')
 
 export default Diamond

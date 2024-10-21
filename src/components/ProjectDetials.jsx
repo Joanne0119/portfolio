@@ -21,8 +21,10 @@ const ProjectDetials = ({currentProject}) => {
   
   return (
     <div 
-        className={`grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 py-8 my-5 rounded-2xl shadow-xl px-5 card`} 
-        style={{top: `calc(10% + ${currentProject.id * 15 }px) `, background: `${currentProject.background} ` }}
+        className={`grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 py-8 my-5 rounded-2xl shadow-xl px-5 ${isMobile ? 'card_flex' : 'card'} `} 
+        style={isMobile ? 
+            {background: `${currentProject.background}`} 
+            :{top: `calc(10% + ${currentProject.id * 15 }px) `, background: `${currentProject.background}`}}
     >
         {currentProject.macbook ? (
             <Canvas className='w-full' camera={{ fov: 75, position: [-10, 45, 20]}}>

@@ -59,9 +59,13 @@ const About = () => {
                 <div className='h-auto max-h-60 min-h-32 min-w-32 rounded-lg overflow-hidden'>
                     <img className='rounded-xl w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='../public/assets/me.png' alt=''/>
                 </div>
-                <div className='inline-flex gap-5'>
-                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold'><span className='font-medium'>Name:</span> Cheng En, Liu (Joanne)</p>
-                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold'><span className='font-medium'>Age:</span> 21</p>
+                <div className='sm:inline-flex sm:gap-10 flex-row'>
+                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold mb-4'>
+                        <span className='font-medium'>Name:</span> 
+                        <br/>Cheng En, Liu (Joanne)</p>
+                    <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold mb-4'>
+                        <span className='font-medium'>Birth:</span>
+                        <br/> January 19, 2004</p>
                 </div>
             </div>
             <div className='sm:py-10 sm:px-6 py-5 px-2 text-balance xl:text-lg md:text-lg sm:text-md text-md font-generalsans text-left text-sky-950'>

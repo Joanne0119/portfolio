@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 const CodingAvatar = (props)  => {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('../public/models/CodingAvatar.glb')
+  const { nodes, materials, animations } = useGLTF('/models/CodingAvatar.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {

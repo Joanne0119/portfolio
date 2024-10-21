@@ -20,8 +20,8 @@ const Macbook = (props) => {
       })
    });
 
-  const { nodes, materials } = useGLTF('../public/models/computer.glb')
-  const txt = useVideoTexture(props.texture ? props.texture : '../public/projects/test.mp4')
+  const { nodes, materials } = useGLTF('/models/computer.glb')
+  const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4')
   return (
     <group {...props} dispose={null} ref={macRef}>
       <group position={[0, 0.294, -0.604]} rotation={[-0.247, 0, 0]} scale={[1, 1.073, 1]}>
@@ -49,6 +49,6 @@ const Macbook = (props) => {
   )
 }
 
-useGLTF.preload('../public/models/computer.glb')
+useGLTF.preload('/models/computer.glb')
 
 export default Macbook

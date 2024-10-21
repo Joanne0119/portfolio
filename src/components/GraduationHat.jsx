@@ -26,7 +26,7 @@ const GraduationHat = (props) => {
       })
    });
    
-  const { nodes, materials } = useGLTF('../public/models/GraduationHat.glb')
+  const { nodes, materials } = useGLTF('/models/GraduationHat.glb')
   return (
     <group {...props} dispose={null} ref={hatRef}>
       <mesh
@@ -59,6 +59,6 @@ const GraduationHat = (props) => {
   )
 }
 
-useGLTF.preload('../public/models/GraduationHat.glb')
+useGLTF.preload('/models/GraduationHat.glb')
 
 export default GraduationHat

@@ -22,6 +22,11 @@ body {
   padding-top: 2rem;
 }
 
+.card_flex {
+  position: relative;
+  padding-top: 1rem;
+}
+
 @layer utilities {
 
   .head-text {

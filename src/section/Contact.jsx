@@ -87,17 +87,17 @@ const Contact = () => {
                         <ul className='inline-flex mt-8 items-center'>
                             <li>
                                 <a href='mailto:joanneliu0119@gmail.com' target='_blank' >
-                                    <img src='../public/assets/mail.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/mail.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
                                 <a href='https://github.com/Joanne0119' target='_blank' >
-                                    <img src='../public/assets/github_black.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/github_black.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
                                 <a href='https://www.instagram.com/joanneliu0119/' target='_blank' >
-                                    <img src='../public/assets/instagram.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/instagram.svg`} alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             

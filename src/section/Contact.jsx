@@ -49,6 +49,8 @@ const Contact = () => {
       },
     });
 
+    const [animationName, setAnimationName] = useState("Idel");
+
     useEffect(() => {
         console.log(showSuccessMessage);
         if (showSuccessMessage) {
@@ -100,7 +102,11 @@ const Contact = () => {
                             </li>
                             
                         </ul>
-                        <button type='submit' className='inline-flex mt-8 sm:text-xl text-lg text-white bg-sky-950 px-8 py-3 rounded-lg font-generalsans font-medium mt-5 justify-center'>
+                        <button 
+                            type='submit' 
+                            className='inline-flex mt-8 sm:text-xl text-lg text-white bg-sky-950 px-8 py-3 rounded-lg font-generalsans font-medium mt-5 justify-center'
+                            onPointerOver={() => setAnimationName('Hi')} onPointerOut={() => setAnimationName('Idel')}
+                            >
                             Submit
                         </button>
                     </div>
@@ -123,13 +129,14 @@ const Contact = () => {
                     )}
                 </form>
             </div>
-            <div className=' min-w-52'>
-                <Canvas className='w-full h-full min-w-52 border'>
+            <div className=' min-w-52'  onPointerOver={() => setAnimationName('Hi')} onPointerOut={() => setAnimationName('Idel')}>
+                <Canvas className='w-full h-full min-w-52'>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                             <HiAvatar
                                 scale={sizes.hiAvatarScale} 
                                 position={sizes.hiAvatarPosition} 
+                                animationName={animationName}
                             />
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>

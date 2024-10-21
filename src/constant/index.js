@@ -21,7 +21,7 @@ export const navLinks = [
     },
   ];
 
-  export const aboutSkills = [
+  export const aboutCode = [
     {
       id: 1,
       name: 'HTML'
@@ -33,28 +33,63 @@ export const navLinks = [
     {
       id: 3,
       name: 'JavaScript',
+    },
+    {
+      id: 4,
+      name: 'SwiftUI',
+    },
+    {
+      id: 5,
+      name: 'Python',
+    },
+    {
+      id: 6,
+      name: 'C/C++',
+    }
+  ];
+
+  export const aboutTools = [
+    {
+      id: 1,
+      name: 'React'
+    },
+    {
+      id: 2,
+      name: 'GitHub'
+    },
+    {
+      id: 3,
+      name: 'Figma',
+    },
+    {
+      id: 4,
+      name: 'Blender',
     }
   ];
 
   export const aboutEducation = [
     {
       id: 1,
-      name: '2019-2022 YMSH'
-    },
-    {
-      id: 2,
-      name: '2022-now NTUE DTD'
+      name: 'National Taipei University of Education - Department of Digital Technology Design'
     }
   ];
 
   export const aboutExperience = [
     {
       id: 1,
-      name: '2024 MAIC'
+      name: 'Finalist in the 2024 MAIC (Mobile App Innovation Competition)'
     },
     {
       id: 2,
-      name: '14th OpenHCI'
+      name: 'Best Technical Award at the 14th OpenHCI Workshop'
+    },
+    {
+      id: 3,
+      name: 'Served as a course lecturer for the department’s camp'
+    },
+    {
+      id: 4,
+      name: 'Held a assistant role in the iOS club'
     }
   ];
 
@@ -84,11 +119,11 @@ export const navLinks = [
     {
         id: 3,
         name: 'Porfolio',   
-        skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'Web3Forms'],
+        skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'GSAP'],
         description: 'A portfolio website that showcases my personal information, projects, and experiences, presenting my unique style and personality.',    
         github: 'https://github.com/Joanne0119/portfolio',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
-        texture: '/projects/WyanMusicDemo.mp4',
+        texture: '/projects/PorfolioDemo.mp4',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
@@ -98,7 +133,7 @@ export const navLinks = [
         skills: ['SwiftUI'],
         description: 'An iOS app that helps users discover new ideas. The main feature involves using AI to ask users questions to help them discover new ideas, presented in the form of mind maps. The app also includes a chatroom feature for brainstorming with others and a gallery where users can upload and view creative works for inspiration.',    
         github: 'https://github.com/dddCrazy87/enSPIRE',
-        netlify: 'https://joanne0119.github.io/music-player/index.html',
+        netlify: 'https://youtu.be/MRch09O2lKA',
         texture: '/projects/enSPIREDemo.mov',
         macbook: false,
         background: 'rgb(255 255 255)'

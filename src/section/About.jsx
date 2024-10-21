@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { aboutSkills, aboutEducation, aboutExperience } from '../constant/index.js'
+import { aboutCode, aboutTools, aboutEducation, aboutExperience } from '../constant/index.js'
 import Star from '../components/Star.jsx'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
@@ -85,7 +85,16 @@ const About = () => {
                         Skills
                     </p>
                 </div>
-                <AboutItems aboutItems={aboutSkills}/>
+                <div className='flex flex-col gap-5 md:gap-20 md:flex-row'>
+                    <div>
+                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>Programming Languages</p>
+                        <AboutItems aboutItems={aboutCode}/>
+                    </div>
+                    <div>
+                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>Frameworks & Tools</p>
+                        <AboutItems aboutItems={aboutTools}/>
+                    </div>
+                </div>
             </div>
             <div>
                 <div className=' flex'>

@@ -24,27 +24,24 @@ const Cellphone = (props) => {
   return (
     <group {...props} dispose={null} ref={phoneRef}>
       <mesh
-        name="phone_body"
         castShadow
         receiveShadow
-        geometry={nodes.phone_body.geometry}
-        material={materials.phone_body}
-      />
-      <mesh
-        name="Cube018"
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube018.geometry}
+        geometry={nodes.Object_4.geometry}
         material={materials.Screen}
       >
         <meshBasicMaterial map={txt} />
       </mesh>
       <mesh
-        name="Cube018_1"
         castShadow
         receiveShadow
-        geometry={nodes.Cube018_1.geometry}
+        geometry={nodes.Object_5.geometry}
         material={materials.Black}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_7.geometry}
+        material={materials.phone_body}
       />
     </group>
   )

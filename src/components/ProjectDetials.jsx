@@ -9,6 +9,7 @@ import gsap from 'gsap'
 import  { ScrollTrigger } from 'gsap/ScrollTrigger'
 import  CanvasLoader  from './CanvasLoader.jsx'
 // import { Leva, useControls } from 'leva'
+import FetchVideo from './FetchVedio.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -34,7 +35,7 @@ const ProjectDetials = ({currentProject}) => {
                         scale={sizes.macbookScale}
                         position={[0.3, -5.4, 0]}
                         rotation={[0.6, 0, 0]}
-                        texture={currentProject.texture}   
+                        texture={currentProject.name == 'Porfile' ? FetchVideo('PortfolioDemo.mp4') : FetchVideo('WyanMusicDemo.mp4')}   
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>
@@ -50,7 +51,7 @@ const ProjectDetials = ({currentProject}) => {
                         scale={sizes.phoneScale}
                         position={[0, 0, 0]}
                         rotation={[0, 0.2, 0]}
-                        texture={currentProject.texture}  
+                        texture={currentProject.name == 'enSPIRE' ? FetchVideo('enSPIREDemo.mp4') : FetchVideo('MarketDuckDemo.mp4')}  
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>

@@ -12,16 +12,15 @@ const  App = () => {
 
   useEffect(() => {
     // Simulating asset loading and updating progress gradually
+
     // Ensure the preloader stays for at least 5 seconds
     const loadTimeout = setTimeout(() => {
       setLoading(false); // Hide preloader after 5 seconds
-      clearInterval(interval); // Stop the interval
-    }, 5800);
+    }, 5000);
 
     // Cleanup intervals when component unmounts
     return () => {
       clearTimeout(loadTimeout);
-      clearInterval(interval);
     };
   }, []);
 

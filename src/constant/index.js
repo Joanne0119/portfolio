@@ -149,9 +149,7 @@ export const navLinks = [
       starScale: isSmall ? 0.8 : isMobile ? 0.9 : 1.0,
       hatScale: isSmall ? 3.8 : isMobile ? 4.4 : 4.6,
       diamondScale: isSmall ? 1.6 : isMobile ? 1.8 : 2.0,
-      macbookScale: isSmall ? 4 : isMobile ? 6 : 7.2,
-      phoneScale: isSmall ? 5 : isMobile ? 10 : 12,
-      cubeScale: isSmall ? 0.3 : isMobile ? 0.5 : 0.8,
-      cubePosition: isSmall ? [2.8, -0.5, 0] : isMobile ? [3.6, -1, 0] : isTablet ? [4.6, -2.6, 0] : [4.6, -2.6, 0],
+      macbookScale: isSmall ? 4.8 : isMobile ? 6.2 : 7.2,
+      phoneScale: isSmall ? 8 : isMobile ? 10 : 12,
     }
 }

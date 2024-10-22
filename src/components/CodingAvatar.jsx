@@ -28,122 +28,159 @@ const CodingAvatar = (props)  => {
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
-              <group name="Armature_33" position={[0, 0, -0.912]}>
-                <group name="GLTF_created_0">
-                  <primitive object={nodes.GLTF_created_0_rootJoint} />
-                  <skinnedMesh
-                    name="Object_7"
-                    geometry={nodes.Object_7.geometry}
-                    material={materials.purpule_shirt}
-                    skeleton={nodes.Object_7.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_9"
-                    geometry={nodes.Object_9.geometry}
-                    material={materials.Skin}
-                    skeleton={nodes.Object_9.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_11"
-                    geometry={nodes.Object_11.geometry}
-                    material={materials.Face}
-                    skeleton={nodes.Object_11.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_13"
-                    geometry={nodes.Object_13.geometry}
-                    material={materials.Jeans}
-                    skeleton={nodes.Object_13.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_15"
-                    geometry={nodes.Object_15.geometry}
-                    material={materials.Skin}
-                    skeleton={nodes.Object_15.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_17"
-                    geometry={nodes.Object_17.geometry}
-                    material={materials.purpule_shirt}
-                    skeleton={nodes.Object_17.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_19"
-                    geometry={nodes.Object_19.geometry}
-                    material={materials.shoe}
-                    skeleton={nodes.Object_19.skeleton}
-                  />
-                  <group name="body_26" />
-                  <group name="hands_27" />
-                  <group name="head_28" />
-                  <group name="legs_29" />
-                  <group name="neck_30" />
-                  <group name="shirtArms_31" />
-                  <group name="shoes_32" />
+              <group name="Sketchfab_model_0" rotation={[-Math.PI / 2, 0, 0]}>
+                <group name="root_1">
+                  <group name="GLTF_SceneRootNode_2" rotation={[Math.PI / 2, 0, 0]}>
+                    <group name="Armature_33_3" position={[0, 0, -0.912]}>
+                      <group name="GLTF_created_0_4">
+                        <group name="GLTF_created_0">
+                          <primitive object={nodes.GLTF_created_0_rootJoint} />
+                          <skinnedMesh
+                            name="Object_41"
+                            geometry={nodes.Object_41.geometry}
+                            material={materials.purpule_shirt}
+                            skeleton={nodes.Object_41.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_44"
+                            geometry={nodes.Object_44.geometry}
+                            material={materials.Skin}
+                            skeleton={nodes.Object_44.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_47"
+                            geometry={nodes.Object_47.geometry}
+                            material={materials.Face}
+                            skeleton={nodes.Object_47.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_50"
+                            geometry={nodes.Object_50.geometry}
+                            material={materials.Jeans}
+                            skeleton={nodes.Object_50.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_53"
+                            geometry={nodes.Object_53.geometry}
+                            material={materials.Skin}
+                            skeleton={nodes.Object_53.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_56"
+                            geometry={nodes.Object_56.geometry}
+                            material={materials.purpule_shirt}
+                            skeleton={nodes.Object_56.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_59"
+                            geometry={nodes.Object_59.geometry}
+                            material={materials.shoe}
+                            skeleton={nodes.Object_59.skeleton}
+                          />
+                          <group name="Object_7_7_correction">
+                            <group name="Object_7_7" />
+                          </group>
+                          <group name="Object_9_9_correction">
+                            <group name="Object_9_9" />
+                          </group>
+                          <group name="Object_11_11_correction">
+                            <group name="Object_11_11" />
+                          </group>
+                          <group name="Object_13_13_correction">
+                            <group name="Object_13_13" />
+                          </group>
+                          <group name="Object_15_15_correction">
+                            <group name="Object_15_15" />
+                          </group>
+                          <group name="Object_17_17_correction">
+                            <group name="Object_17_17" />
+                          </group>
+                          <group name="Object_19_19_correction">
+                            <group name="Object_19_19" />
+                          </group>
+                        </group>
+                      </group>
+                    </group>
+                    <group
+                      name="monitor_34_47"
+                      position={[0, 0.111, 0.587]}
+                      rotation={[-2.895, 0, -Math.PI]}
+                      scale={[1, 1.073, 1]}>
+                      <group name="Object_48_48">
+                        <mesh
+                          name="Object_62"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_62.geometry}
+                          material={materials.material}
+                        />
+                      </group>
+                      <group name="Object_49_49">
+                        <mesh
+                          name="Object_64"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_64.geometry}
+                          material={materials.Mac_Black}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name="keyboard_35_50"
+                      position={[0, 0.111, 0.587]}
+                      rotation={[0, Math.PI / 2, 0]}
+                      scale={[0.963, 1, 1]}>
+                      <group name="Object_51_51">
+                        <mesh
+                          name="Object_67"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_67.geometry}
+                          material={materials.material}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name="Screen_36_52"
+                      position={[-0.002, 0.783, 0.735]}
+                      rotation={[-Math.PI, 0, -Math.PI]}>
+                      <group name="Object_53_53">
+                        <mesh
+                          name="Object_70"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_70.geometry}
+                          material={materials.screen}
+                        />
+                      </group>
+                    </group>
+                    <group name="Desk_37_54" position={[0, 0, 0.565]} scale={[2.089, 0.143, 1.345]}>
+                      <group name="Object_55_55">
+                        <mesh
+                          name="Object_73"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_73.geometry}
+                          material={materials.wood}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name="Cube_38_56"
+                      position={[0, -0.963, -0.868]}
+                      scale={[0.911, 0.112, 0.566]}>
+                      <group name="Object_57_57">
+                        <mesh
+                          name="Object_76"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_76.geometry}
+                          material={materials.chair_wood}
+                        />
+                      </group>
+                    </group>
+                  </group>
                 </group>
-              </group>
-              <group
-                name="monitor_34"
-                position={[0, 0.111, 0.587]}
-                rotation={[-2.895, 0, -Math.PI]}
-                scale={[1, 1.073, 1]}>
-                <mesh
-                  name="Object_48"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_48.geometry}
-                  material={materials.material}
-                />
-                <mesh
-                  name="Object_49"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_49.geometry}
-                  material={materials.Mac_Black}
-                />
-              </group>
-              <group
-                name="keyboard_35"
-                position={[0, 0.111, 0.587]}
-                rotation={[0, Math.PI / 2, 0]}
-                scale={[0.963, 1, 1]}>
-                <mesh
-                  name="Object_51"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_51.geometry}
-                  material={materials.material}
-                />
-              </group>
-              <group
-                name="Screen_36"
-                position={[-0.002, 0.783, 0.735]}
-                rotation={[-Math.PI, 0, -Math.PI]}>
-                <mesh
-                  name="Object_53"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_53.geometry}
-                  material={materials.screen}
-                />
-              </group>
-              <group name="Desk_37" position={[0, 0, 0.565]} scale={[2.089, 0.143, 1.345]}>
-                <mesh
-                  name="Object_55"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_55.geometry}
-                  material={materials.wood}
-                />
-              </group>
-              <group name="Cube_38" position={[0, -0.963, -0.868]} scale={[0.911, 0.112, 0.566]}>
-                <mesh
-                  name="Object_57"
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Object_57.geometry}
-                  material={materials.chair_wood}
-                />
               </group>
             </group>
           </group>

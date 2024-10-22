@@ -112,7 +112,7 @@ export const navLinks = [
         description: 'An iOS app that integrates markets across Taiwan. Users can search for markets based on location or category and view detailed information about each market. The app also includes a membership point system to encourage public participation in market culture and incentivize market owners to use the platform.',    
         github: 'https://github.com/Joanne0119/Market-Duck',
         netlify: 'https://youtu.be/ixhBDF6XOf0',
-        texture: '/projects/MarketDuckDemo.mov',
+        texture: '/projects/MarketDuckDemo.mp4',
         macbook: false,
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
@@ -134,7 +134,7 @@ export const navLinks = [
         description: 'An iOS app that helps users discover new ideas. The main feature involves using AI to ask users questions to help them discover new ideas, presented in the form of mind maps. The app also includes a chatroom feature for brainstorming with others and a gallery where users can upload and view creative works for inspiration.',    
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://youtu.be/MRch09O2lKA',
-        texture: '/projects/enSPIREDemo.mov',
+        texture: '/projects/enSPIREDemo.mp4',
         macbook: false,
         background: 'rgb(255 255 255)'
     }

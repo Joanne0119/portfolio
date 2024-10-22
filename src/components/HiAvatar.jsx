@@ -9,7 +9,7 @@ import * as THREE from 'three'
 
 const HiAvatar = ({animationName = 'Idel', ...props}) => {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('../public/models/hiAvatar.glb')
+  const { nodes, materials, animations } = useGLTF('/models/hiavatar.glb')
   const { actions, mixer } = useAnimations(animations, group)
 
   const [activeAction, setActiveAction] = useState(null)
@@ -104,6 +104,6 @@ const HiAvatar = ({animationName = 'Idel', ...props}) => {
   )
 }
 
-useGLTF.preload('/models/hiAvatar.glb')
+useGLTF.preload('/models/hiavatar.glb')
 
 export default HiAvatar

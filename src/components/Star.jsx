@@ -25,7 +25,7 @@ const Star = (props)  => {
         })
     });
 
-  const { nodes, materials } = useGLTF('../public/models/Star.glb')
+  const { nodes, materials } = useGLTF('/models/Star.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -41,6 +41,6 @@ const Star = (props)  => {
   )
 }
 
-useGLTF.preload('../public/models/Star.glb')
+useGLTF.preload('/models/Star.glb')
 
 export default Star;

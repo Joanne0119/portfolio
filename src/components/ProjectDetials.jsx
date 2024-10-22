@@ -77,7 +77,7 @@ const ProjectDetials = ({currentProject}) => {
             <div className='bottom-4 right-4 flex justify-end'>
                 <button>
                     <a href={currentProject.github} target='_blank' className='flex bg-sky-950 px-1 py-2 rounded-xl mx-2 hover:translate-y-1 hover:bg-black-300 transition-all duration-300' >
-                        <img src='../public/assets/github.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                        <img src='/assets/github.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                     </a>
                 </button>
                 <button>
@@ -85,7 +85,7 @@ const ProjectDetials = ({currentProject}) => {
                         <p className='font-generalsans text-xs sm:text-sm'>
                             {currentProject.macbook ? 'View Project' : 'View Demo'}
                         </p>
-                        <img src='../public/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
+                        <img src='/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
                     </a>
                 </button>
             </div>

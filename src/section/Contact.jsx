@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import HiAvatar from '../components/HiAvatar'
-import { OrbitControls,PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera } from '@react-three/drei'
 import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import  CanvasLoader  from '../components/CanvasLoader.jsx'
@@ -141,7 +141,6 @@ const Contact = () => {
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
                     </Suspense>
-                    <OrbitControls enableZoom={false} enablePan={true} maxPolarAngle={Math.PI / 2} />
                 </Canvas>
             </div>
         </div>

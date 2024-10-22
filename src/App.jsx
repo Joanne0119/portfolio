@@ -11,21 +11,20 @@ const  App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate asset loading (Replace this with real asset loading logic)
-    const loadAssets = async () => {
-      try {
-        // Fetch your assets, models, or data here
-        // E.g., loading 3D models or videos
-        await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulating load time
-      } catch (error) {
-        console.error('Error loading assets:', error);
-      } finally {
-        setLoading(false); // Hide preloader once loading is complete
-      }
-    };
+    // Simulating asset loading and updating progress gradually
+    // Ensure the preloader stays for at least 5 seconds
+    const loadTimeout = setTimeout(() => {
+      setLoading(false); // Hide preloader after 5 seconds
+      clearInterval(interval); // Stop the interval
+    }, 5800);
 
-    loadAssets();
+    // Cleanup intervals when component unmounts
+    return () => {
+      clearTimeout(loadTimeout);
+      clearInterval(interval);
+    };
   }, []);
+
   return (
     <main>
       {loading ? (

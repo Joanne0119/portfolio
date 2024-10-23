@@ -24,7 +24,7 @@ const CodingAvatar = (props)  => {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
+      <group name="Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
@@ -38,37 +38,57 @@ const CodingAvatar = (props)  => {
                             <group name="GLTF_created_0_4_7">
                               <group name="GLTF_created_0_8">
                                 <group name="GLTF_created_0">
-                                  <primitive object={nodes.GLTF_created_0_rootJoint} />
+                                  <group name="Object_41_41_correction">
+                                    <group name="Object_41_41" />
+                                  </group>
+                                  <group name="Object_44_44_correction">
+                                    <group name="Object_44_44" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_47"
                                     geometry={nodes.Object_47.geometry}
                                     material={materials.purpule_shirt}
                                     skeleton={nodes.Object_47.skeleton}
                                   />
+                                  <group name="Object_47_47_correction">
+                                    <group name="Object_47_47" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_50"
                                     geometry={nodes.Object_50.geometry}
-                                    material={materials.Skin}
+                                    material={materials['Skin.001']}
                                     skeleton={nodes.Object_50.skeleton}
                                   />
+                                  <group name="Object_50_50_correction">
+                                    <group name="Object_50_50" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_53"
                                     geometry={nodes.Object_53.geometry}
-                                    material={materials.Face}
+                                    material={materials['Face.001']}
                                     skeleton={nodes.Object_53.skeleton}
                                   />
+                                  <group name="Object_53_53_correction">
+                                    <group name="Object_53_53" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_56"
                                     geometry={nodes.Object_56.geometry}
-                                    material={materials.Jeans}
+                                    material={materials['Jeans.001']}
                                     skeleton={nodes.Object_56.skeleton}
                                   />
+                                  <group name="Object_56_56_correction">
+                                    <group name="Object_56_56" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_59"
                                     geometry={nodes.Object_59.geometry}
-                                    material={materials.Skin}
+                                    material={materials['Skin.001']}
                                     skeleton={nodes.Object_59.skeleton}
                                   />
+                                  <group name="Object_59_59_correction">
+                                    <group name="Object_59_59" />
+                                  </group>
                                   <skinnedMesh
                                     name="Object_62"
                                     geometry={nodes.Object_62.geometry}
@@ -78,31 +98,60 @@ const CodingAvatar = (props)  => {
                                   <skinnedMesh
                                     name="Object_65"
                                     geometry={nodes.Object_65.geometry}
-                                    material={materials.shoe}
+                                    material={materials['shoe.001']}
                                     skeleton={nodes.Object_65.skeleton}
                                   />
-                                  <group name="Object_41_41_correction">
-                                    <group name="Object_41_41" />
-                                  </group>
-                                  <group name="Object_44_44_correction">
-                                    <group name="Object_44_44" />
-                                  </group>
-                                  <group name="Object_47_47_correction">
-                                    <group name="Object_47_47" />
-                                  </group>
-                                  <group name="Object_50_50_correction">
-                                    <group name="Object_50_50" />
-                                  </group>
-                                  <group name="Object_53_53_correction">
-                                    <group name="Object_53_53" />
-                                  </group>
-                                  <group name="Object_56_56_correction">
-                                    <group name="Object_56_56" />
-                                  </group>
-                                  <group name="Object_59_59_correction">
-                                    <group name="Object_59_59" />
-                                  </group>
+                                  <primitive object={nodes.GLTF_created_0_rootJoint} />
                                 </group>
+                              </group>
+                            </group>
+                          </group>
+                          <group
+                            name="Cube_38_56_74"
+                            position={[0, -0.963, -0.868]}
+                            scale={[0.911, 0.112, 0.566]}>
+                            <group name="Object_57_57_75">
+                              <group name="Object_76_76">
+                                <mesh
+                                  name="Object_88"
+                                  castShadow
+                                  receiveShadow
+                                  geometry={nodes.Object_88.geometry}
+                                  material={materials['chair_wood.001']}
+                                />
+                              </group>
+                            </group>
+                          </group>
+                          <group
+                            name="Desk_37_54_71"
+                            position={[0, 0, 0.565]}
+                            scale={[2.089, 0.143, 1.345]}>
+                            <group name="Object_55_55_72">
+                              <group name="Object_73_73">
+                                <mesh
+                                  name="Object_84"
+                                  castShadow
+                                  receiveShadow
+                                  geometry={nodes.Object_84.geometry}
+                                  material={materials['wood.001']}
+                                />
+                              </group>
+                            </group>
+                          </group>
+                          <group
+                            name="keyboard_35_50_65"
+                            position={[0, 0.111, 0.587]}
+                            rotation={[0, 1.571, 0]}
+                            scale={[0.963, 1, 1]}>
+                            <group name="Object_51_51_66">
+                              <group name="Object_67_67">
+                                <mesh
+                                  name="Object_76"
+                                  castShadow
+                                  receiveShadow
+                                  geometry={nodes.Object_76.geometry}
+                                  material={materials.material}
+                                />
                               </group>
                             </group>
                           </group>
@@ -129,24 +178,7 @@ const CodingAvatar = (props)  => {
                                   castShadow
                                   receiveShadow
                                   geometry={nodes.Object_72.geometry}
-                                  material={materials.Mac_Black}
-                                />
-                              </group>
-                            </group>
-                          </group>
-                          <group
-                            name="keyboard_35_50_65"
-                            position={[0, 0.111, 0.587]}
-                            rotation={[0, Math.PI / 2, 0]}
-                            scale={[0.963, 1, 1]}>
-                            <group name="Object_51_51_66">
-                              <group name="Object_67_67">
-                                <mesh
-                                  name="Object_76"
-                                  castShadow
-                                  receiveShadow
-                                  geometry={nodes.Object_76.geometry}
-                                  material={materials.material}
+                                  material={materials['Mac_Black.001']}
                                 />
                               </group>
                             </group>
@@ -154,7 +186,7 @@ const CodingAvatar = (props)  => {
                           <group
                             name="Screen_36_52_68"
                             position={[-0.002, 0.783, 0.735]}
-                            rotation={[-Math.PI, 0, -Math.PI]}>
+                            rotation={[Math.PI, 0, Math.PI]}>
                             <group name="Object_53_53_69">
                               <group name="Object_70_70">
                                 <mesh
@@ -162,39 +194,7 @@ const CodingAvatar = (props)  => {
                                   castShadow
                                   receiveShadow
                                   geometry={nodes.Object_80.geometry}
-                                  material={materials.screen}
-                                />
-                              </group>
-                            </group>
-                          </group>
-                          <group
-                            name="Desk_37_54_71"
-                            position={[0, 0, 0.565]}
-                            scale={[2.089, 0.143, 1.345]}>
-                            <group name="Object_55_55_72">
-                              <group name="Object_73_73">
-                                <mesh
-                                  name="Object_84"
-                                  castShadow
-                                  receiveShadow
-                                  geometry={nodes.Object_84.geometry}
-                                  material={materials.wood}
-                                />
-                              </group>
-                            </group>
-                          </group>
-                          <group
-                            name="Cube_38_56_74"
-                            position={[0, -0.963, -0.868]}
-                            scale={[0.911, 0.112, 0.566]}>
-                            <group name="Object_57_57_75">
-                              <group name="Object_76_76">
-                                <mesh
-                                  name="Object_88"
-                                  castShadow
-                                  receiveShadow
-                                  geometry={nodes.Object_88.geometry}
-                                  material={materials.chair_wood}
+                                  material={materials['screen.001']}
                                 />
                               </group>
                             </group>
@@ -210,6 +210,7 @@ const CodingAvatar = (props)  => {
         </group>
       </group>
     </group>
+
   )
 }
 

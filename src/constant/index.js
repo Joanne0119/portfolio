@@ -118,12 +118,12 @@ export const navLinks = [
     },
     {
         id: 3,
-        name: 'Porfolio',   
+        name: 'Portfolio',   
         skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'GSAP'],
         description: 'A portfolio website that highlights my personal information, projects, and experiences through engaging 3D elements and interactive features, reflecting my unique style, creativity, and technical skills.',    
         github: 'https://github.com/Joanne0119/portfolio',
         netlify: 'https://joanne-porfolio.netlify.app/',
-        texture: '/projects/PorfolioDemo.mp4',
+        texture: '/projects/PortfolioDemo.mp4',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },

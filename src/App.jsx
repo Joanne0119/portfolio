@@ -45,7 +45,7 @@ const  App = () => {
   return (
     <main>
       {loading ? (
-        <Preloader />
+        <Preloader progress={progress}/>
       ) : (
         <>
           <Navbar />

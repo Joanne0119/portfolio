@@ -26,6 +26,12 @@ const Cellphone = (props) => {
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.Object_13.geometry}
+        material={materials.phone_body}
+      />
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Object_8.geometry}
         material={materials.Screen}
       >
@@ -36,12 +42,6 @@ const Cellphone = (props) => {
         receiveShadow
         geometry={nodes.Object_10.geometry}
         material={materials.Black}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Object_13.geometry}
-        material={materials.phone_body}
       />
     </group>
   )

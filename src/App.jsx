@@ -66,12 +66,6 @@ const  App = () => {
       });
 
     const loadAssets = async () => {
-      // Load 4 3D models
-      await load3DModel('/models/CodingAvatar.glb');
-      await load3DModel('/models/hiavatar.glb');
-      await load3DModel('/models/phone.glb');
-      await load3DModel('/models/macbook.glb');
-
       // Load the videos first
       await loadVideo('/projects/WyanMusicDemo.mp4');
       await loadVideo('/projects/MarketDuckDemo.mp4');
@@ -80,6 +74,12 @@ const  App = () => {
 
       // Load the image
       await loadImage('/assets/me.png');
+      
+      // Load 4 3D models
+      await load3DModel('/models/CodingAvatar.glb');
+      await load3DModel('/models/hiavatar.glb');
+      await load3DModel('/models/phone.glb');
+      await load3DModel('/models/macbook.glb');
     };
 
     loadAssets();

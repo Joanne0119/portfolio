@@ -49,58 +49,80 @@ const HiAvatar = ({animationName = 'Idel', ...props}) => {
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
-              <group name="Armature001_33">
-                <group name="GLTF_created_0">
-                  <primitive object={nodes.GLTF_created_0_rootJoint} />
-                  <skinnedMesh
-                    name="Object_7"
-                    geometry={nodes.Object_7.geometry}
-                    material={materials['purpule_shirt.001']}
-                    skeleton={nodes.Object_7.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_9"
-                    geometry={nodes.Object_9.geometry}
-                    material={materials['Skin.001']}
-                    skeleton={nodes.Object_9.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_11"
-                    geometry={nodes.Object_11.geometry}
-                    material={materials['Face.001']}
-                    skeleton={nodes.Object_11.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_13"
-                    geometry={nodes.Object_13.geometry}
-                    material={materials['Jeans.001']}
-                    skeleton={nodes.Object_13.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_15"
-                    geometry={nodes.Object_15.geometry}
-                    material={materials['Skin.001']}
-                    skeleton={nodes.Object_15.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_17"
-                    geometry={nodes.Object_17.geometry}
-                    material={materials['purpule_shirt.001']}
-                    skeleton={nodes.Object_17.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_19"
-                    geometry={nodes.Object_19.geometry}
-                    material={materials['shoe.001']}
-                    skeleton={nodes.Object_19.skeleton}
-                  />
-                  <group name="body001_26" />
-                  <group name="hands001_27" />
-                  <group name="head001_28" />
-                  <group name="legs001_29" />
-                  <group name="neck001_30" />
-                  <group name="shirtArms001_31" />
-                  <group name="shoes001_32" />
+              <group name="Sketchfab_model_0" rotation={[-Math.PI / 2, 0, 0]}>
+                <group name="root_1">
+                  <group name="GLTF_SceneRootNode_2" rotation={[Math.PI / 2, 0, 0]}>
+                    <group name="Armature001_33_3">
+                      <group name="GLTF_created_0_4">
+                        <group name="GLTF_created_0">
+                          <primitive object={nodes.GLTF_created_0_rootJoint} />
+                          <skinnedMesh
+                            name="Object_41"
+                            geometry={nodes.Object_41.geometry}
+                            material={materials['purpule_shirt.001']}
+                            skeleton={nodes.Object_41.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_44"
+                            geometry={nodes.Object_44.geometry}
+                            material={materials['Skin.001']}
+                            skeleton={nodes.Object_44.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_47"
+                            geometry={nodes.Object_47.geometry}
+                            material={materials['Face.001']}
+                            skeleton={nodes.Object_47.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_50"
+                            geometry={nodes.Object_50.geometry}
+                            material={materials['Jeans.001']}
+                            skeleton={nodes.Object_50.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_53"
+                            geometry={nodes.Object_53.geometry}
+                            material={materials['Skin.001']}
+                            skeleton={nodes.Object_53.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_56"
+                            geometry={nodes.Object_56.geometry}
+                            material={materials['purpule_shirt.001']}
+                            skeleton={nodes.Object_56.skeleton}
+                          />
+                          <skinnedMesh
+                            name="Object_59"
+                            geometry={nodes.Object_59.geometry}
+                            material={materials['shoe.001']}
+                            skeleton={nodes.Object_59.skeleton}
+                          />
+                          <group name="Object_7_7_correction">
+                            <group name="Object_7_7" />
+                          </group>
+                          <group name="Object_9_9_correction">
+                            <group name="Object_9_9" />
+                          </group>
+                          <group name="Object_11_11_correction">
+                            <group name="Object_11_11" />
+                          </group>
+                          <group name="Object_13_13_correction">
+                            <group name="Object_13_13" />
+                          </group>
+                          <group name="Object_15_15_correction">
+                            <group name="Object_15_15" />
+                          </group>
+                          <group name="Object_17_17_correction">
+                            <group name="Object_17_17" />
+                          </group>
+                          <group name="Object_19_19_correction">
+                            <group name="Object_19_19" />
+                          </group>
+                        </group>
+                      </group>
+                    </group>
+                  </group>
                 </group>
               </group>
             </group>

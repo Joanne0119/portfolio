@@ -34,7 +34,9 @@ const ProjectDetials = ({currentProject}) => {
                         scale={sizes.macbookScale}
                         position={[0.3, -5.4, 0]}
                         rotation={[0.6, 0, 0]}
-                        texture={currentProject.texture}   
+                        texture={currentProject.texture}  
+                        texture2={currentProject.mobileTexture}
+                        isMobile={isMobile} 
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>
@@ -51,6 +53,8 @@ const ProjectDetials = ({currentProject}) => {
                         position={[0, 0, 0]}
                         rotation={[0, 0.2, 0]}
                         texture={currentProject.texture}  
+                        texture2={currentProject.mobileTexture}
+                        isMobile={isMobile}
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>

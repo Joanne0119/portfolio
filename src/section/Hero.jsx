@@ -38,12 +38,6 @@ const Hero = () => {
                             roatation={[0,-2,0]}
                         />
                     </HeroCamera>
-                    {/* <group>
-                        <Cube 
-                            scale={sizes.cubeScale} 
-                            position={sizes.cubePosition} 
-                        />
-                    </group> */}
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={2}/>
                 </Suspense>

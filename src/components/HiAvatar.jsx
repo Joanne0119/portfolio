@@ -49,58 +49,58 @@ const HiAvatar = ({animationName = 'Idel', ...props}) => {
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
-              <group name="Armature_33">
+              <group name="Armature001_33">
                 <group name="GLTF_created_0">
                   <primitive object={nodes.GLTF_created_0_rootJoint} />
                   <skinnedMesh
                     name="Object_7"
                     geometry={nodes.Object_7.geometry}
-                    material={materials.purpule_shirt}
+                    material={materials['purpule_shirt.001']}
                     skeleton={nodes.Object_7.skeleton}
                   />
                   <skinnedMesh
                     name="Object_9"
                     geometry={nodes.Object_9.geometry}
-                    material={materials.Skin}
+                    material={materials['Skin.001']}
                     skeleton={nodes.Object_9.skeleton}
                   />
                   <skinnedMesh
                     name="Object_11"
                     geometry={nodes.Object_11.geometry}
-                    material={materials.Face}
+                    material={materials['Face.001']}
                     skeleton={nodes.Object_11.skeleton}
                   />
                   <skinnedMesh
                     name="Object_13"
                     geometry={nodes.Object_13.geometry}
-                    material={materials.Jeans}
+                    material={materials['Jeans.001']}
                     skeleton={nodes.Object_13.skeleton}
                   />
                   <skinnedMesh
                     name="Object_15"
                     geometry={nodes.Object_15.geometry}
-                    material={materials.Skin}
+                    material={materials['Skin.001']}
                     skeleton={nodes.Object_15.skeleton}
                   />
                   <skinnedMesh
                     name="Object_17"
                     geometry={nodes.Object_17.geometry}
-                    material={materials.purpule_shirt}
+                    material={materials['purpule_shirt.001']}
                     skeleton={nodes.Object_17.skeleton}
                   />
                   <skinnedMesh
                     name="Object_19"
                     geometry={nodes.Object_19.geometry}
-                    material={materials.shoe}
+                    material={materials['shoe.001']}
                     skeleton={nodes.Object_19.skeleton}
                   />
-                  <group name="body_26" />
-                  <group name="hands_27" />
-                  <group name="head_28" />
-                  <group name="legs_29" />
-                  <group name="neck_30" />
-                  <group name="shirtArms_31" />
-                  <group name="shoes_32" />
+                  <group name="body001_26" />
+                  <group name="hands001_27" />
+                  <group name="head001_28" />
+                  <group name="legs001_29" />
+                  <group name="neck001_30" />
+                  <group name="shirtArms001_31" />
+                  <group name="shoes001_32" />
                 </group>
               </group>
             </group>

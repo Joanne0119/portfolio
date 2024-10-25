@@ -18,7 +18,7 @@ const ProjectDetials = ({currentProject}) => {
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 })
 
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
-  
+
   return (
     <div 
         className={`grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 py-8 my-5 rounded-2xl shadow-xl px-5 ${isMobile ? 'card_flex' : 'card'} `} 
@@ -35,8 +35,6 @@ const ProjectDetials = ({currentProject}) => {
                         position={[0.3, -5.4, 0]}
                         rotation={[0.6, 0, 0]}
                         texture={currentProject.texture}  
-                        texture2={currentProject.mobileTexture}
-                        isMobile={isMobile} 
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>
@@ -53,8 +51,6 @@ const ProjectDetials = ({currentProject}) => {
                         position={[0, 0, 0]}
                         rotation={[0, 0.2, 0]}
                         texture={currentProject.texture}  
-                        texture2={currentProject.mobileTexture}
-                        isMobile={isMobile}
                     />
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={1}/>

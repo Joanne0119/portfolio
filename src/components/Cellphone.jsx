@@ -7,7 +7,7 @@ import { useGLTF, useTexture, useVideoTexture } from '@react-three/drei'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
-const Cellphone = ({isMobile, texture2, ...props}) => {
+const Cellphone = (props) => {
   const phoneRef = useRef();
 
     useGSAP(() => {
@@ -19,15 +19,12 @@ const Cellphone = ({isMobile, texture2, ...props}) => {
       })
    });
    
-   //const txt = isMobile ? useTexture(props.texture2) : useVideoTexture(props.texture ? props.texture : '/projects/test.mov')
-   let txt;
-  if (isMobile && props.texture2) {
-    txt = useTexture(props.texture2);
-    console.log('Using texture2:', props.texture2);
-  } else {
-    txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mov');
-    console.log('Using videoTexture:', props.texture ? props.texture : '/projects/test.mov');
-  }
+   const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4', {
+    loop: true,
+    muted: true,
+    start: true,
+    crossOrigin: "Anonymous"
+  });
   const { nodes, materials } = useGLTF('/models/phone.glb')
   return (
     <group {...props} dispose={null} ref={phoneRef}>

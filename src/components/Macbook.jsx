@@ -21,15 +21,13 @@ const Macbook = ({isMobile, texture2, ...props}) => {
    });
 
   const { nodes, materials } = useGLTF('/models/computer.glb')
-  // const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4')
-  let txt;
-  if (isMobile && props.texture2) {
-    txt = useTexture(props.texture2);
-    console.log('Using texture2:');
-  } else {
-    txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4');
-    console.log('Using videoTexture:');
-  }
+  const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4',{
+    loop: true,
+    muted: true,
+    start: true,
+    crossOrigin: "Anonymous"
+  })
+
   return (
     <group {...props} dispose={null} ref={macRef}>
       <group position={[0, 0.294, -0.604]} rotation={[-0.247, 0, 0]} scale={[1, 1.073, 1]}>

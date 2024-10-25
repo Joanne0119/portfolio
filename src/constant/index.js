@@ -101,8 +101,7 @@ export const navLinks = [
         description: 'An interactive music streaming site where users can register, receive personalized music recommendations, search for songs, and upload their own music. Creators can categorize and feature their tracks on the homepage to increase visibility.',    
         github: 'https://github.com/Joanne0119/music-player',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
-        texture: '/projects/WyanMusicDemo.mp4',
-        mobileTexture: '/projects/WyanMusicMobile.jpg',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/WyanMusicDemo.mp4',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(203 213 225))'
     },
@@ -113,8 +112,7 @@ export const navLinks = [
         description: 'An iOS app that integrates markets across Taiwan. Users can search for markets based on location or category and view detailed information about each market. The app also includes a membership point system to encourage public participation in market culture and incentivize market owners to use the platform.',    
         github: 'https://github.com/Joanne0119/Market-Duck',
         netlify: 'https://youtu.be/ixhBDF6XOf0',
-        texture: '/projects/MarketDuckDemo.mp4',
-        mobileTexture: '/projects/MarketDuckMobile.jpg',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/MarketDuckDemo.mp4',
         macbook: false,
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
@@ -125,8 +123,7 @@ export const navLinks = [
         description: 'A portfolio website that highlights my personal information, projects, and experiences through engaging 3D elements and interactive features, reflecting my unique style, creativity, and technical skills.',    
         github: 'https://github.com/Joanne0119/portfolio',
         netlify: 'https://joanne-porfolio.netlify.app/',
-        texture: '/projects/PortfolioDemo.mp4',
-        mobileTexture: '/projects/PortfolioMobile.jpg',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioDemo.mp4',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
@@ -137,8 +134,7 @@ export const navLinks = [
         description: 'An iOS app that helps users discover new ideas. The main feature involves using AI to ask users questions to help them discover new ideas, presented in the form of mind maps. The app also includes a chatroom feature for brainstorming with others and a gallery where users can upload and view creative works for inspiration.',    
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://youtu.be/MRch09O2lKA',
-        texture: '/projects/enSPIREDemo.mp4',
-        mobileTexture: '/projects/enSPIREMobile.jpg',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/enSPIREDemo.mp4',
         macbook: false,
         background: 'rgb(255 255 255)'
     }

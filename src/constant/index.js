@@ -102,6 +102,7 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/music-player',
         netlify: 'https://joanne0119.github.io/music-player/index.html',
         texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/WyanMusicDemo.mp4',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/WyanMusicMobile.jpg',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(203 213 225))'
     },
@@ -113,6 +114,7 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/Market-Duck',
         netlify: 'https://youtu.be/ixhBDF6XOf0',
         texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/MarketDuckDemo.mp4',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/MarketDuckMobile.jpg',
         macbook: false,
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
@@ -124,6 +126,7 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/portfolio',
         netlify: 'https://joanne-porfolio.netlify.app/',
         texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioDemo.mp4',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioMobile.jpg',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
@@ -135,6 +138,7 @@ export const navLinks = [
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://youtu.be/MRch09O2lKA',
         texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/enSPIREDemo.mp4',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/enSPIREMobile.jpg',
         macbook: false,
         background: 'rgb(255 255 255)'
     }

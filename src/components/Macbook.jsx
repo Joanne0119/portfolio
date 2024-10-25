@@ -6,9 +6,10 @@ import React, { useRef } from 'react'
 import { useGLTF, useTexture, useVideoTexture } from '@react-three/drei'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
+import { useMediaQuery } from 'react-responsive'
 
 
-const Macbook = ({isMobile, texture2, ...props}) => {
+const Macbook = (props) => {
     const macRef = useRef();
 
     useGSAP(() => {
@@ -21,12 +22,19 @@ const Macbook = ({isMobile, texture2, ...props}) => {
    });
 
   const { nodes, materials } = useGLTF('/models/computer.glb')
-  const txt = useVideoTexture(props.texture ? props.texture : '/projects/test.mp4',{
-    loop: true,
-    muted: true,
-    start: true,
-    crossOrigin: "Anonymous"
-  })
+  const isMobile = useMediaQuery({ maxWidth: 768 })
+  let txt;
+  
+  if(!isMobile){
+    txt = useVideoTexture(props.texture ? props.texture : 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioDemo.mp4', {
+      loop: true,
+      muted: true,
+      start: true,
+      crossOrigin: "Anonymous"
+    });
+  }else{
+    txt = useTexture(props.texture? props.texture : 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioMobile.jpg')
+  }
 
   return (
     <group {...props} dispose={null} ref={macRef}>

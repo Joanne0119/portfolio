@@ -105,3 +105,150 @@ body {
   width: 100px;
   height: 100px;
 }
+
+#gameplay {
+  position: relative;
+  width: 480px;
+  height: 300px;
+  border-bottom: solid 3px rgb(64, 64, 64);
+  overflow: hidden;
+}
+
+#player {
+  background-image: url('assets/walk_1.png');
+  background-size: contain;
+  width: 52px;
+  height: 92px;
+  opacity: 1;
+  position: absolute;
+  bottom: -2px;
+  left: 40px;
+}
+
+#player.walk {
+  animation: walk 0.8s infinite linear;
+}
+
+#player.jump {
+  animation: jump 1.4s infinite linear;
+}
+
+#obstacle {
+  background-image: url('assets/bug_1.PNG');
+  background-size: contain;
+  width: 65px;
+  height: 29px;
+  opacity: 1;
+  position: absolute;
+  bottom: -4px;
+  right: 10%;
+}
+
+#obstacle.bug {
+  animation: bug 0.5s infinite linear;
+}
+
+.gameover {
+  filter: grayscale(80%);
+}
+
+@media screen and (max-width: 600px) {
+  #gameplay {
+    width: 220px;
+    height: 180px;
+    border-bottom: solid 2px rgb(64, 64, 64);
+  }
+  #player {
+    width: 35px;
+    height: 62px;
+    left: 15px;
+  }
+  #obstacle {
+    width: 45px;
+    height: 20px;
+  }
+
+  #player.jump {
+    animation: jumpMobile 1.5s infinite linear;
+  }
+}
+
+@keyframes walk {
+  0% {
+    background-image: url('assets/walk_1.png');
+    opacity: 1;
+  }
+  25% {
+    background-image: url('assets/walk_2.png');
+    opacity: 1;
+  }
+  50% {
+    background-image: url('assets/walk_1.png');
+    opacity: 1;
+  }
+  75% {
+    background-image: url('assets/walk_3.png');
+    opacity: 1;
+  }
+  100% {
+    background-image: url('assets/walk_1.png');
+    opacity: 1;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: -2px;
+    transform: translateX(0);
+    transform: rotate(0);
+    background-image: url('assets/walk_1.png');
+  }
+  50% {
+    bottom: 70px;
+    transform: translateX(-10px);
+    background-image: url('assets/walk_2.png');
+    transform: rotate(10deg);
+  }
+  100% {
+    bottom: -2px;
+    transform: translateX(0);
+    transform: rotate(0);
+    background-image: url('assets/walk_1.png');
+  }
+}
+
+@keyframes jumpMobile {
+  0% {
+    bottom: -2px;
+    transform: translateX(0);
+    transform: rotate(0);
+    background-image: url('assets/walk_1.png');
+  }
+  50% {
+    bottom: 50px;
+    transform: translateX(-10px);
+    background-image: url('assets/walk_2.png');
+    transform: rotate(10deg);
+  }
+  100% {
+    bottom: -2px;
+    transform: translateX(0);
+    transform: rotate(0);
+    background-image: url('assets/walk_1.png');
+  }
+}
+
+@keyframes bug {
+  0% {
+    opacity: 1;
+    background-image: url('assets/bug_1.PNG');
+  }
+  50% {
+    opacity: 1;
+    background-image: url('assets/bug_2.PNG');
+  }
+  100% {
+    opacity: 1;
+    background-image: url('assets/bug_1.PNG');
+  }
+}

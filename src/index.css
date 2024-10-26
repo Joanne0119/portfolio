@@ -115,7 +115,7 @@ body {
 }
 
 #player {
-  background-image: url('assets/walk_1.png');
+  background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   background-size: contain;
   width: 52px;
   height: 92px;
@@ -134,7 +134,7 @@ body {
 }
 
 #obstacle {
-  background-image: url('assets/bug_1.PNG');
+  background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/bug_1.PNG');
   background-size: contain;
   width: 65px;
   height: 29px;
@@ -175,23 +175,23 @@ body {
 
 @keyframes walk {
   0% {
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
     opacity: 1;
   }
   25% {
-    background-image: url('assets/walk_2.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
     opacity: 1;
   }
   50% {
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
     opacity: 1;
   }
   75% {
-    background-image: url('assets/walk_3.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_3.png');
     opacity: 1;
   }
   100% {
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
     opacity: 1;
   }
 }
@@ -201,19 +201,19 @@ body {
     bottom: -2px;
     transform: translateX(0);
     transform: rotate(0);
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
   50% {
     bottom: 70px;
     transform: translateX(-10px);
-    background-image: url('assets/walk_2.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
     transform: rotate(10deg);
   }
   100% {
     bottom: -2px;
     transform: translateX(0);
     transform: rotate(0);
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
 }
 
@@ -222,33 +222,33 @@ body {
     bottom: -2px;
     transform: translateX(0);
     transform: rotate(0);
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
   50% {
     bottom: 50px;
     transform: translateX(-10px);
-    background-image: url('assets/walk_2.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
     transform: rotate(10deg);
   }
   100% {
     bottom: -2px;
     transform: translateX(0);
     transform: rotate(0);
-    background-image: url('assets/walk_1.png');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
 }
 
 @keyframes bug {
   0% {
     opacity: 1;
-    background-image: url('assets/bug_1.PNG');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/bug_1.PNG');
   }
   50% {
     opacity: 1;
-    background-image: url('assets/bug_2.PNG');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/bug_2.PNG');
   }
   100% {
     opacity: 1;
-    background-image: url('assets/bug_1.PNG');
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/bug_1.PNG');
   }
 }

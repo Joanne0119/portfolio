@@ -14,7 +14,7 @@ const  App = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const totalAssets = 9; // 1 image + 4 3D models + 4 videos
+    const totalAssets = 14; // 1 image + 4 3D models + 4 videos
     let loadedAssets = 0;
     const assetWeight = 1 / totalAssets;  // Each asset has equal weight
 
@@ -66,6 +66,12 @@ const  App = () => {
       });
 
     const loadAssets = async () => {
+      // Load the image first
+      await loadImage('/assets/walk_1.png');
+      await loadImage('/assets/walk_2.png');
+      await loadImage('/assets/walk_3.png');
+      await loadImage('/assets/bug_1.PNG');
+      await loadImage('/assets/bug_2.PNG');
       // Load 4 3D models
       await load3DModel('/models/CodingAvatar.glb');
       await load3DModel('/models/hiavatar.glb');
@@ -87,7 +93,7 @@ const  App = () => {
 
   return (
     <main>
-      {loading ? (
+      {true ? (
           <Preloader/>
       ) : (
         <>

@@ -3,10 +3,11 @@ import React, { useRef, useEffect, useState } from 'react'
 import { set } from 'react-hook-form';
 
 const Preloader = () => {
-  const [gameOver, setGameOver] = useState(false);
+  const [gameOver, setGameOver] = useState(true);
   const [isplayerJump, setIsPlayerJump] = useState(false);
   const [obstaclePosition, setObstaclePosition] = useState(-10);
   const [showPlayAgain, setShowPlayAgain] = useState(false);
+  const [showInit, setShowInit] = useState(true);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(parseInt(localStorage.getItem('highScore')) || 0);
 
@@ -20,6 +21,7 @@ const Preloader = () => {
     setIsPlayerJump(false);
     setGameOver(false);
     setShowPlayAgain(false);
+    setShowInit(false);
     setScore(0);
     setHighScore(parseInt(localStorage.getItem('highScore')) || 0);
   }
@@ -27,6 +29,9 @@ const Preloader = () => {
   useEffect(() => {
     const handleClick = (event) => {
       if(gameOver) {
+        gameInit();
+      }
+      else if(showInit) {
         gameInit();
       }
       else{
@@ -43,6 +48,9 @@ const Preloader = () => {
 
     const handleKeyDown = (event) => {
       if(gameOver) {
+        gameInit();
+      }
+      else if(showInit) {
         gameInit();
       }
       else {
@@ -136,8 +144,8 @@ const Preloader = () => {
         <p className='absolute top-1/3 right-5 text-sky-950 sm:text-md text-sm gap-4 flex flex-row'><span>Score: {score}</span><span>High Score: {highScore}</span></p>
         <div id='player' ref={playerRef} className={`${gameOver ? 'gameover' : `${isplayerJump ? 'jump' : 'walk'}`}`}></div>
         <div id='obstacle' ref={obstacleRef} className={`${gameOver ? 'gameover' : 'bug'}`} style={obstacleMovement}></div>
-        <button id='playagain' className={`${showPlayAgain ? 'flex' : 'hidden'} absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-500 p-2 rounded-xl hover:bg-sky-600`}>
-            <img src='/assets/rotate_arrow.svg' alt='playagain' className='w-10 h-10 p-1' />
+        <button id='playagain' className={`${showPlayAgain || showInit ? 'flex' : 'hidden'} absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-500 p-2 rounded-xl hover:bg-sky-600`}>
+            <img src={`${showInit ? '/assets/play.svg' : '/assets/rotate_arrow.svg'}`} alt='playagain' className='w-10 h-10 p-1' />
         </button>
       </div>
       <p className='text-sky-950 text-xl font-generalsans font-bold mt-5'>Loading...</p>

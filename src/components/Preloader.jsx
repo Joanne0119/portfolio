@@ -1,8 +1,8 @@
-import { pre, use } from 'framer-motion/client';
 import React, { useRef, useEffect, useState } from 'react'
-import { set } from 'react-hook-form';
+import { useMediaQuery } from 'react-responsive'
 
 const Preloader = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 })
   const [gameOver, setGameOver] = useState(true);
   const [isplayerJump, setIsPlayerJump] = useState(false);
   const [obstaclePosition, setObstaclePosition] = useState(-10);
@@ -36,11 +36,10 @@ const Preloader = () => {
       }
       else{
         if(gameRef.current && !gameRef.current.contains(event.target)) {
-          console.log('clicked')
           setIsPlayerJump(true);
           setTimeout(() => {
             setIsPlayerJump(false);
-          }, 1400);
+          }, 1000);
         }
       }
     }
@@ -55,11 +54,10 @@ const Preloader = () => {
       }
       else {
         if(event.code=== 'Space' || event.code === 'ArrowUp') {
-          console.log('space pressed')
           setIsPlayerJump(true);
           setTimeout(() => {
             setIsPlayerJump(false);
-          }, 1400);
+          }, 1000);
         }
       }
     }
@@ -142,7 +140,7 @@ const Preloader = () => {
       {/* <iframe className='loader' src="https://lottie.host/embed/c918fc5f-6517-48cf-9b0a-279871ed45f1/CyjVieM6rD.json"></iframe> */}
       <div id='gameplay' ref={gameRef}>
         <p className='absolute top-1/3 right-5 text-sky-950 sm:text-md text-sm gap-4 flex flex-row'><span>Score: {score}</span><span>High Score: {highScore}</span></p>
-        <div id='player' ref={playerRef} className={`${gameOver ? 'gameover' : `${isplayerJump ? 'jump' : 'walk'}`}`}></div>
+        <div id='player' ref={playerRef} className={`${gameOver ? 'gameover' : (isplayerJump ? (isMobile ? 'jumpMobile' : 'jump') : 'walk')}`}></div>
         <div id='obstacle' ref={obstacleRef} className={`${gameOver ? 'gameover' : 'bug'}`} style={obstacleMovement}></div>
         <button id='playagain' className={`${showPlayAgain || showInit ? 'flex' : 'hidden'} absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-500 p-2 rounded-xl hover:bg-sky-600`}>
             <img src={`${showInit ? '/assets/play.svg' : '/assets/rotate_arrow.svg'}`} alt='playagain' className='w-10 h-10 p-1' />

@@ -87,7 +87,7 @@ const  App = () => {
 
   return (
     <main>
-      {loading ? (
+      {true ? (
           <Preloader/>
       ) : (
         <>

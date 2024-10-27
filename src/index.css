@@ -130,7 +130,11 @@ body {
 }
 
 #player.jump {
-  animation: jump 1.4s infinite linear;
+  animation: jump 1s infinite linear;
+}
+
+#player.jumpMobile {
+  animation: jumpMobile 1s infinite linear;
 }
 
 #obstacle {
@@ -167,10 +171,6 @@ body {
     width: 45px;
     height: 20px;
   }
-
-  #player.jump {
-    animation: jumpMobile 1.5s infinite linear;
-  }
 }
 
 @keyframes walk {
@@ -203,8 +203,20 @@ body {
     transform: rotate(0);
     background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
+  30% {
+    bottom: 45px;
+    transform: translateX(-10px);
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
+    transform: rotate(10deg);
+  }
   50% {
-    bottom: 70px;
+    bottom: 60px;
+    transform: translateX(-10px);
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
+    transform: rotate(10deg);
+  }
+  70% {
+    bottom: 45px;
     transform: translateX(-10px);
     background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
     transform: rotate(10deg);
@@ -224,8 +236,20 @@ body {
     transform: rotate(0);
     background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_1.png');
   }
+  30% {
+    bottom: 25px;
+    transform: translateX(-10px);
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
+    transform: rotate(10deg);
+  }
   50% {
-    bottom: 50px;
+    bottom: 40px;
+    transform: translateX(-10px);
+    background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
+    transform: rotate(10deg);
+  }
+  70% {
+    bottom: 25px;
     transform: translateX(-10px);
     background-image: url('https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/assets/walk_2.png');
     transform: rotate(10deg);

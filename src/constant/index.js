@@ -96,7 +96,7 @@ export const navLinks = [
   export const projectInfo = [
     {
         id: 1,
-        name: 'Wyan Music',
+        name: 'Wayne Music',
         skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap5', 'Firebase'],
         description: 'An interactive music streaming site where users can register, receive personalized music recommendations, search for songs, and upload their own music. Creators can categorize and feature their tracks on the homepage to increase visibility.',    
         github: 'https://github.com/Joanne0119/music-player',

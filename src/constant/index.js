@@ -97,7 +97,7 @@ export const navLinks = [
         description: 'An interactive 3D bento customization website where users can register, browse ingredients, design, and customize their own 3D bento, and save their unique bento creations to their account.',    
         github: 'https://github.com/Joanne0119/lunch_box',
         netlify: 'https://heweibox.vercel.app/',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/hewei.mp4',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiDemo.mp4',
         mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiMobile.jpg',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(252 243 235)'

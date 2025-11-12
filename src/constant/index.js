@@ -129,7 +129,7 @@ export const navLinks = [
     {
         id: 4,
         name: 'enSPIRE',   
-        skills: ['SwiftUI'],
+        skills: ['SwiftUI', 'ChatGPT API'],
         description: 'An iOS app that helps users discover new ideas. The main feature involves using AI to ask users questions to help them discover new ideas, presented in the form of mind maps. The app also includes a chatroom feature for brainstorming with others and a gallery where users can upload and view creative works for inspiration.',    
         github: 'https://github.com/dddCrazy87/enSPIRE',
         netlify: 'https://youtu.be/MRch09O2lKA',

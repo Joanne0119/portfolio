@@ -69,7 +69,7 @@ const About = () => {
                 </div>
             </div>
             <div className='sm:py-10 sm:px-6 py-5 px-2 text-balance xl:text-lg md:text-lg sm:text-md text-md font-generalsans text-left text-sky-950'>
-                I am Joanne, a proactive individual with <span className='font-bold'>over 3 years of web development experience, specializing in front-end technologies</span> like JavaScript,React and CSS. I enjoy <span className='font-bold'>building interactive websites and apps.</span> I am currently expanding my skills in back-end and AI to bring more innovation to my projects.
+                I am Joanne, a proactive <span className='font-bold'>full-stack developer</span> experienced in building interactive web and mobile applications. <span className='font-bold'>Skilled in front-end technologies like JavaScript, React, and CSS</span> , I also integrate <span className="font-bold">back-end systems, IoT devices, and real-time data flows</span> to create practical, user-centered solutions. I enjoy turning complex technical challenges into functional and engaging applications.
             </div>
         <div>
         <div className='sm:ml-10'>

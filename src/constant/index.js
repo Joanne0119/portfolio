@@ -36,7 +36,7 @@ export const navLinks = [
     },
     {
       id: 4,
-      name: 'SwiftUI',
+      name: 'Swift/SwiftUI',
     },
     {
       id: 5,
@@ -59,11 +59,11 @@ export const navLinks = [
     },
     {
       id: 3,
-      name: 'Figma',
+      name: 'TailwindCSS',
     },
     {
       id: 4,
-      name: 'Blender',
+      name: 'Unity',
     }
   ];
 
@@ -77,34 +77,30 @@ export const navLinks = [
   export const aboutExperience = [
     {
       id: 1,
-      name: 'Finalist in the 2024 MAIC (Mobile App Innovation Competition)'
+      name: 'Intern at Institute of Information Science, Academia Sinica: Developed an iOS Bluetooth node utility tool & an anomaly detection system'
     },
     {
       id: 2,
-      name: 'Best Technical Award at the 14th OpenHCI Workshop'
+      name: 'Finalist in the 2024 MAIC (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan'
     },
     {
       id: 3,
-      name: 'Served as a course lecturer for the department’s camp'
-    },
-    {
-      id: 4,
-      name: 'Held a assistant role in the iOS club'
+      name: 'Best Technical Award at the 14th OpenHCI Workshop: Developed an VR game using Unity'
     }
   ];
 
   export const projectInfo = [
     {
         id: 1,
-        name: 'Wayne Music',
-        skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap5', 'Firebase'],
-        description: 'An interactive music streaming site where users can register, receive personalized music recommendations, search for songs, and upload their own music. Creators can categorize and feature their tracks on the homepage to increase visibility.',    
-        github: 'https://github.com/Joanne0119/music-player',
-        netlify: 'https://joanne0119.github.io/music-player/index.html',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/WyanMusicDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/WyanMusicMobile.jpg',
+        name: 'Hewei Box',
+        skills: ['JavaScript', 'TailwindCSS', 'React', 'motion', 'Redux', 'Firebase'],
+        description: 'An interactive 3D bento customization website where users can register, browse ingredients, design, and customize their own 3D bento, and save their unique bento creations to their account.',    
+        github: 'https://github.com/Joanne0119/lunch_box',
+        netlify: 'https://heweibox.vercel.app/',
+        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/hewei.mp4',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiMobile.jpg',
         macbook: true,
-        background: 'linear-gradient(to bottom right, white , rgb(203 213 225))'
+        background: 'linear-gradient(to bottom right, white , rgb(252 243 235)'
     },
     {
         id: 2,

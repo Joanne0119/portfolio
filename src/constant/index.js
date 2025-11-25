@@ -98,7 +98,7 @@ export const navLinks = [
         github: 'https://github.com/Joanne0119/lunch_box',
         netlify: 'https://heweibox.vercel.app/',
         texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiMobile.jpg',
+        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiDemoMobile.jpg',
         macbook: true,
         background: 'linear-gradient(to bottom right, white , rgb(252 243 235)'
     },

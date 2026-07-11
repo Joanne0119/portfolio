@@ -3,6 +3,7 @@ import { OrbitControls,  PerspectiveCamera } from '@react-three/drei'
 import React, { Suspense } from 'react'
 import Macbook from './Macbook.jsx'
 import Cellphone from './Cellphone.jsx'
+import Locker from './Locker.jsx'
 import { calculateSizes} from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import gsap from 'gsap'
@@ -42,6 +43,23 @@ const ProjectDetials = ({currentProject}) => {
                     <Cellphone
                         scale={sizes.phoneScaleBoth}
                         position={[5.2, -1, 0]}
+                        rotation={[0, -0.3, 0]}
+                        texture={phoneTextureForBoth}
+                    />
+                </>
+            );
+        }
+        if (displayType === 'phone-cabinet') {
+            return (
+                <>
+                    <Locker
+                        scale={sizes.lockerScale}
+                        position={[-4.5, 0, 0]}
+                        rotation={[0, 0.35, 0]}
+                    />
+                    <Cellphone
+                        scale={sizes.phoneWithLockerScale}
+                        position={[4.5, -0.5, 0]}
                         rotation={[0, -0.3, 0]}
                         texture={phoneTextureForBoth}
                     />
@@ -88,7 +106,14 @@ const ProjectDetials = ({currentProject}) => {
 
         <div className='min-h-80  p-3 flex flex-col justify-between'>
             <div >
-                <h3 className='text-3xl font-generalsans font-medium text-sky-950 py-5'>{currentProject.name}</h3>
+                <div className='pt-5 pb-2 flex items-baseline gap-3 flex-wrap'>
+                    <h3 className='text-3xl font-generalsans font-medium text-sky-950'>{currentProject.name}</h3>
+                    {currentProject.role && (
+                        <span className='text-xs bg-sky-100 text-sky-800 border border-sky-300 rounded-full px-3 py-1 font-medium font-generalsans whitespace-nowrap'>
+                            {currentProject.role}
+                        </span>
+                    )}
+                </div>
                 <ul className='flex gap-2 flex-wrap'>
                     {currentProject.skills.map((tag, index) => (
                         <li key={index} className='sm:text-sm md:text-sm text-xs text-base text-sky-800 font-generalsans font-medium  py-1 border-2 border-sky-800 rounded-3xl px-3'>
@@ -101,9 +126,11 @@ const ProjectDetials = ({currentProject}) => {
                 </p>
             </div>
             <div className='bottom-4 right-4 flex justify-end flex-wrap gap-2'>
-                <a href={currentProject.github} target='_blank' rel='noreferrer' className='flex bg-sky-950 px-2 py-2 rounded-xl hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
-                    <img src='/assets/github.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
-                </a>
+                {currentProject.github && (
+                    <a href={currentProject.github} target='_blank' rel='noreferrer' className='flex bg-sky-950 px-2 py-2 rounded-xl hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
+                        <img src='/assets/github.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                    </a>
+                )}
                 {currentProject.github2 && (
                     <a href={currentProject.github2} target='_blank' rel='noreferrer' className='flex bg-sky-950 px-2 py-2 rounded-xl hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
                         <img src='/assets/github.svg' alt='github (second repo)' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
@@ -117,12 +144,14 @@ const ProjectDetials = ({currentProject}) => {
                         <img src='/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
                     </a>
                 )}
-                <a href={currentProject.demoUrl} target='_blank' rel='noreferrer' className='flex gap-2 items-center bg-sky-900 px-8 py-2 rounded-xl text-white hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
-                    <p className='font-generalsans text-xs sm:text-sm'>
-                        {ctaLabel}
-                    </p>
-                    <img src='/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
-                </a>
+                {currentProject.demoUrl && (
+                    <a href={currentProject.demoUrl} target='_blank' rel='noreferrer' className='flex gap-2 items-center bg-sky-900 px-8 py-2 rounded-xl text-white hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
+                        <p className='font-generalsans text-xs sm:text-sm'>
+                            {ctaLabel}
+                        </p>
+                        <img src='/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
+                    </a>
+                )}
             </div>
         </div>
     </div>

@@ -62,8 +62,15 @@ export const translations = {
       list: [
         {
           name: "Toys Don't Move Right",
+          role: 'Frontend · Networking · Art Direction',
           description:
             'A multiplayer motion-controlled party game with a "one screen, many phones" experience — no app to install, no controllers needed. Everyone just scans the QR code on the game screen with their phone and instantly joins the fun. Tilt, tap and swipe your phone to control adorable toy characters in the shared world on screen. Designed for casual gatherings where friends can jump in and play together in seconds.',
+        },
+        {
+          name: 'Smart Meal Locker System',
+          role: 'Full-stack Software Development',
+          description:
+            'A smart meal-pickup locker system integrating LINE Bot with IoT cabinets. Users upload their order screenshot to the LINE Bot; Gemini OCR reads the receipt to auto-assign a locker and generate a verification code. MQTT drives real-time cabinet control (unlock, capture, status), with LINE push notifications on timeout or anomaly.',
         },
         {
           name: 'Hewei Box',
@@ -171,8 +178,15 @@ export const translations = {
       list: [
         {
           name: '不會動的玩具才正常吧',
+          role: '負責前端、連線、美術設計',
           description:
             '一款主打「一台電腦、多支手機」的多人派對遊戲：不用下載 App、不需要任何遊戲手把，玩家只要用手機掃描電腦畫面上的 QR Code 就能立刻加入。透過傾斜、點擊與滑動手機，操控畫面上可愛的玩具角色一起同樂。專為朋友聚會設計，幾秒內就能加入房間開玩。',
+        },
+        {
+          name: '智慧取餐櫃系統',
+          role: '負責全端軟體系統開發',
+          description:
+            '整合 LINE Bot 與智慧櫃體的取餐系統：使用者上傳訂單截圖，Gemini OCR 辨識後自動分配櫃位並產生驗證碼，MQTT 即時控制櫃體開關、拍照與狀態回報，逾時或異常由 LINE 主動推播通知。',
         },
         {
           name: '盒味盒子',

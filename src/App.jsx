@@ -21,6 +21,7 @@ const MODELS = [
 const VIDEOS = [
   '/projects/toyDemo.mp4',
   '/projects/toyPhoneDemo.mp4',
+  '/projects/lockerDemo.mp4',
   '/projects/MarketDuckDemo.mp4',
   '/projects/enSPIREDemo.mp4',
   '/projects/PortfolioDemo.mp4',

@@ -74,7 +74,7 @@ const Contact = () => {
                         </div>
                         <div className='field'>
                             <label className='field-label' htmlFor='email'>{t('contact.email')}</label>
-                            <input className='field-input' type='email' id='email' {...register("eml", { required: true })}/>
+                            <input className='field-input' type='email' id='email' {...register("email", { required: true })}/>
                         </div>
                         <div className='field'>
                             <label className='field-label' htmlFor='message'>{t('contact.message')}</label>
@@ -85,7 +85,7 @@ const Contact = () => {
                         <ul className='inline-flex mt-8 items-center'>
                             <li>
                                 <a href='mailto:joanneliu0119@gmail.com' target='_blank' >
-                                    <img src='/assets/mail.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src='/assets/mail.svg' alt='mail' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>

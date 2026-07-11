@@ -37,7 +37,6 @@ const Hero = () => {
                         <CodingAvatar
                             scale={sizes.avatarScale}
                             position={sizes.avatarPosition}
-                            roatation={[0,-2,0]}
                         />
                     </HeroCamera>
                         <ambientLight intensity={1} />

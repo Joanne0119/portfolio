@@ -14,7 +14,7 @@ const  App = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const totalAssets =  9; // 1 image + 4 3D models + 4 videos
+    const totalAssets = 10; // 1 image + 5 3D models + 4 videos
     let loadedAssets = 0;
     const assetWeight = 1 / totalAssets;  // Each asset has equal weight
 
@@ -51,7 +51,7 @@ const  App = () => {
     };
 
     loadingManager.onLoad = () => {
-      loadedAssets += 4; // All 4 models are loaded
+      loadedAssets += 5; // All 5 models are loaded
       setProgress((loadedAssets / totalAssets) * 100); // Final progress update
       setLoading(false); // All assets loaded
     };
@@ -66,11 +66,12 @@ const  App = () => {
       });
 
     const loadAssets = async () => {
-      // Load 4 3D models
+      // Load 5 3D models
       await load3DModel('/models/CodingAvatar.glb');
       await load3DModel('/models/hiavatar.glb');
       await load3DModel('/models/phone.glb');
       await load3DModel('/models/macbook.glb');
+      await load3DModel('/models/Award.glb');
 
       // Load the videos first
       await loadVideo('/projects/WyanMusicDemo.mp4');

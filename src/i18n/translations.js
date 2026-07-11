@@ -30,15 +30,21 @@ export const translations = {
       programmingLanguages: 'Programming Languages',
       frameworksAndTools: 'Frameworks & Tools',
       education: 'Education',
-      experience: 'Experience',
+      workExperience: 'Work Experience',
+      competitionExperience: 'Competition Experience',
       code: ['HTML', 'CSS', 'JavaScript', 'Swift/SwiftUI', 'Python', 'C/C++'],
       tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
       educationList: [
         'National Taipei University of Education - Department of Digital Technology Design',
         'National Sun Yat-sen University - Department of Computer Science and Engineering',
       ],
-      experienceList: [
-        'Intern at Institute of Information Science, Academia Sinica: Developed an iOS Bluetooth node utility tool & an anomaly detection system',
+      workList: [
+        'Full-stack Engineering Intern at Institute of Information Science, Academia Sinica: Developed an iOS Bluetooth node utility tool & an anomaly detection system',
+        'Front-end Engineering Intern at Genibuilder Technology Co., Ltd.: Developed a cross-platform B2B appointment & customer service application',
+      ],
+      competitionList: [
+        'Winner of the 2026 Vision Get Wild Award for Non-Traditional Games: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
+        'Honorable Mention in the 2026 Original Game Award for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
         'Finalist in the 2024 MAIC (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan',
         'Best Technical Award at the 14th OpenHCI Workshop: Developed an VR game using Unity',
       ],
@@ -124,12 +130,18 @@ export const translations = {
       programmingLanguages: '程式語言',
       frameworksAndTools: '框架與工具',
       education: '學歷',
-      experience: '經歷',
+      workExperience: '工作經歷',
+      competitionExperience: '比賽經歷',
       code: ['HTML', 'CSS', 'JavaScript', 'Swift / SwiftUI', 'Python', 'C / C++'],
       tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
       educationList: ['國立臺北教育大學 - 數位科技設計學系', '國立中山大學 - 資訊工程學系'],
-      experienceList: [
-        '中央研究院資訊科學研究所實習：開發 iOS 藍牙節點工具與異常偵測系統',
+      workList: [
+        '中央研究院資訊科技創新研究中心 全端工程實習生：開發 iOS 藍牙節點工具與異常偵測系統',
+        '沛智科技股份有限公司 前端工程實習生：開發跨平台 B2B 預約與客服應用程式'
+      ],
+      competitionList: [
+        '2026 放視大賞 遊戲類 非典型遊戲組 金獎：開發用手機作為遙控器的多人派對遊戲',
+        '2026 原創遊戲大賞 校園組 佳作：開發用手機作為遙控器的多人派對遊戲',
         '2024 行動應用創新競賽 (MAIC) 決賽入選：開發整合全台市場的 iOS 應用程式',
         '第 14 屆 OpenHCI 工作坊 最佳技術獎：以 Unity 開發 VR 遊戲',
       ],

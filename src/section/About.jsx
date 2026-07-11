@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 import GraduationHat from '../components/GraduationHat.jsx'
 import Diamond from '../components/Diamond.jsx'
+import Award from '../components/Award.jsx'
 import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import gsap from 'gsap'
@@ -63,7 +64,8 @@ const About = () => {
     const code = t('about.code');
     const tools = t('about.tools');
     const educationList = t('about.educationList');
-    const experienceList = t('about.experienceList');
+    const workList = t('about.workList');
+    const competitionList = t('about.competitionList');
 
     return (
         <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
@@ -144,10 +146,27 @@ const About = () => {
 
                     </Canvas>
                     <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
-                        {t('about.experience')}
+                        {t('about.workExperience')}
                     </p>
                 </div>
-                <AboutList items={experienceList}/>
+                <AboutList items={workList}/>
+            </div>
+            <div>
+                <div className=' flex'>
+                    <Canvas className='w-full h-full  min-w-12 max-w-20 inline'>
+                        <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                        <Award
+                            scale={sizes.awardScale}
+                        />
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[10, 10, 10]} intensity={2}/>
+
+                    </Canvas>
+                    <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
+                        {t('about.competitionExperience')}
+                    </p>
+                </div>
+                <AboutList items={competitionList}/>
             </div>
             </div>
         </div>

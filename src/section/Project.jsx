@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import  { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ProjectDetials from '../components/ProjectDetials.jsx'
 import { useMediaQuery } from 'react-responsive'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -11,14 +12,16 @@ gsap.registerPlugin(ScrollTrigger)
 const Project = () => {
     const projectRef = useRef(null)
     const isMobile = useMediaQuery({ maxWidth: 768 })
+    const { t } = useLanguage();
+    const projectList = t('projects.list');
 
     useEffect(() => {
         const project = projectRef.current;
 
 
-          gsap.fromTo(project, 
-            { y: 100 },  
-            { y: 0, duration: 1.5, ease: 'power3.out', 
+          gsap.fromTo(project,
+            { y: 100 },
+            { y: 0, duration: 1.5, ease: 'power3.out',
               scrollTrigger: {
                 trigger: project,
                 start: 'top-100 bottom-=100',
@@ -31,21 +34,23 @@ const Project = () => {
 
     return (
         <section id='projects' className='mt-4 sm:mx-16 mx-4 relative' ref={projectRef}>
-            <h1 className={`head-text ${isMobile ? 'relative' : 'sticky'} top-0`}>Projects</h1>
-            
+            <h1 className={`head-text ${isMobile ? 'relative' : 'sticky'} top-0`}>{t('projects.title')}</h1>
+
             <div >
             {
-                projectInfo.map((project) => (
-                    <ProjectDetials 
-                        currentProject={project}
-                        key={project.id} 
-                    />
-                ))
-                
+                projectInfo.map((project, idx) => {
+                    const localized = projectList[idx] || { name: '', description: '' };
+                    return (
+                        <ProjectDetials
+                            currentProject={{ ...project, name: localized.name, description: localized.description }}
+                            key={project.id}
+                        />
+                    );
+                })
             }
             </div>
-            
-            
+
+
         </section>
     )
 }

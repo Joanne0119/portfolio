@@ -25,9 +25,19 @@ const Hero = () => {
                 <p className='inline sm:text-2xl text-1xl text-sky-800 font-generalsans font-medium '>
                     {t('hero.subtitle')}
                 </p>
-                <button className='inline mt-8 sm:text-2xl text-1xl text-white bg-sky-950 px-5 py-2 rounded-full font-generalsans font-medium '>
-                    <a href='#contact'>{t('hero.cta')}</a>
-                </button>
+                <a
+                    href='#contact'
+                    onClick={(e) => {
+                        e.preventDefault();
+                        const target = document.querySelector('#contact');
+                        if (target) {
+                            window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+                        }
+                    }}
+                    className='inline mt-8 sm:text-2xl text-1xl text-white bg-sky-950 px-5 py-2 rounded-full font-generalsans font-medium hover:bg-sky-800 transition-colors'
+                >
+                    {t('hero.cta')}
+                </a>
             </div>
             <div className=' min-w-52'>
             <Canvas className='w-full h-full min-w-52'>

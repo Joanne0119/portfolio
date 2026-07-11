@@ -117,7 +117,7 @@ const ProjectDetials = ({currentProject}) => {
                         <img src='/assets/up-right-from-square.svg' alt='link' className='sm:w-4 h-auto object-contain sm:min-w-4 sm:min-h-4 w-3 min-w-3 min-h-3'/>
                     </a>
                 )}
-                <a href={currentProject.netlify} target='_blank' rel='noreferrer' className='flex gap-2 items-center bg-sky-900 px-8 py-2 rounded-xl text-white hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
+                <a href={currentProject.demoUrl} target='_blank' rel='noreferrer' className='flex gap-2 items-center bg-sky-900 px-8 py-2 rounded-xl text-white hover:translate-y-1 hover:bg-black-300 transition-all duration-300'>
                     <p className='font-generalsans text-xs sm:text-sm'>
                         {ctaLabel}
                     </p>

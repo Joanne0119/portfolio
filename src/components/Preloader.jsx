@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 const Preloader = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 })
+  const { t } = useLanguage();
   const [gameOver, setGameOver] = useState(true);
   const [isplayerJump, setIsPlayerJump] = useState(false);
   const [obstaclePosition, setObstaclePosition] = useState(-10);
@@ -146,7 +148,7 @@ const Preloader = () => {
             <img src={`${showInit ? '/assets/play.svg' : '/assets/rotate_arrow.svg'}`} alt='playagain' className='w-10 h-10 p-1' />
         </button>
       </div>
-      <p className='text-sky-950 text-xl font-generalsans font-bold mt-5'>Loading...</p>
+      <p className='text-sky-950 text-xl font-generalsans font-bold mt-5'>{t('preloader.loading')}</p>
     </div>
   )
 }

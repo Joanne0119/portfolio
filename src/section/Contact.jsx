@@ -70,31 +70,31 @@ const Contact = () => {
                     <div className='grid grid-cols-1 gap-5 items-center'>
                         <div className='field'>
                             <label className='field-label' htmlFor='name'>{t('contact.name')}</label>
-                            <input className='field-input' type='text' id='name' {...register("name", { required: true })}/>
+                            <input className='field-input' type='text' id='name' autoComplete='name' {...register("name", { required: true })}/>
                         </div>
                         <div className='field'>
                             <label className='field-label' htmlFor='email'>{t('contact.email')}</label>
-                            <input className='field-input' type='email' id='email' {...register("email", { required: true })}/>
+                            <input className='field-input' type='email' id='email' autoComplete='email' {...register("email", { required: true })}/>
                         </div>
                         <div className='field'>
                             <label className='field-label' htmlFor='message'>{t('contact.message')}</label>
-                            <textarea className='field-input resize-none h-40' id='message' {...register("message", { required: true })}/>
+                            <textarea className='field-input resize-none h-40' id='message' autoComplete='off' {...register("message", { required: true })}/>
                         </div>
                     </div>
                     <div className='flex justify-between'>
                         <ul className='inline-flex mt-8 items-center'>
                             <li>
-                                <a href='mailto:joanneliu0119@gmail.com' target='_blank' >
+                                <a href='mailto:joanneliu0119@gmail.com' target='_blank' rel='noreferrer'>
                                     <img src='/assets/mail.svg' alt='mail' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
-                                <a href='https://github.com/Joanne0119' target='_blank' >
+                                <a href='https://github.com/Joanne0119' target='_blank' rel='noreferrer'>
                                     <img src='/assets/github_black.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
                             <li>
-                                <a href='https://www.instagram.com/joanneliu0119/' target='_blank' >
+                                <a href='https://www.instagram.com/joanneliu0119/' target='_blank' rel='noreferrer'>
                                     <img src='/assets/instagram.svg' alt='instagram' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>

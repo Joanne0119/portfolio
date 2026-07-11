@@ -104,6 +104,9 @@ export const translations = {
       toggle: '繁',
       ariaLabel: 'Switch to Traditional Chinese',
     },
+    preloader: {
+      loading: 'Loading...',
+    },
   },
   zh: {
     nav: {
@@ -209,6 +212,9 @@ export const translations = {
     language: {
       toggle: 'EN',
       ariaLabel: '切換為英文',
+    },
+    preloader: {
+      loading: '載入中…',
     },
   },
 };

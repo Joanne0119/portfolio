@@ -6,6 +6,7 @@ import Project from './section/Project'
 import Contact from './section/Contact'
 import Footer from './section/Footer'
 import Preloader from './components/Preloader'
+import { useLanguage } from './i18n/LanguageContext.jsx'
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -31,7 +32,9 @@ const IMAGES = [
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
+  const { switching } = useLanguage();
 
   useEffect(() => {
     const totalAssets = MODELS.length + VIDEOS.length + IMAGES.length;
@@ -97,19 +100,30 @@ const App = () => {
     loadAssets();
   }, []);
 
+  useEffect(() => {
+    if (!loading) {
+      const t = setTimeout(() => setVisible(true), 30);
+      return () => clearTimeout(t);
+    }
+  }, [loading]);
+
   return (
     <main>
       {loading ? (
           <Preloader/>
       ) : (
-        <>
+        <div
+          className={`transition-opacity ease-out ${
+            switching ? 'duration-200 opacity-0' : `duration-500 ${visible ? 'opacity-100' : 'opacity-0'}`
+          }`}
+        >
           <Navbar />
           <Hero />
           <About />
           <Project />
           <Contact />
           <Footer />
-        </>
+        </div>
       )}
     </main>
   )

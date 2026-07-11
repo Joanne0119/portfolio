@@ -117,7 +117,7 @@ export const translations = {
     },
     hero: {
       greeting: '哈囉！我是 Joanne',
-      subtitle: '我是一位有創意的工程師與設計師',
+      subtitle: '有創意的工程師 × 設計師',
       cta: '聯絡我',
     },
     about: {

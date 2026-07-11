@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import { translations, defaultLanguage } from './translations';
 
 const STORAGE_KEY = 'portfolio-lang';
+const FADE_DURATION = 180;
 
 const LanguageContext = createContext(null);
 
@@ -24,6 +25,7 @@ const resolve = (dict, path) => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(getInitialLanguage);
+  const [switching, setSwitching] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -45,11 +47,15 @@ export const LanguageProvider = ({ children }) => {
   );
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => (prev === 'en' ? 'zh' : 'en'));
+    setSwitching(true);
+    setTimeout(() => {
+      setLanguage((prev) => (prev === 'en' ? 'zh' : 'en'));
+      setTimeout(() => setSwitching(false), 30);
+    }, FADE_DURATION);
   }, []);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t, switching }}>
       {children}
     </LanguageContext.Provider>
   );

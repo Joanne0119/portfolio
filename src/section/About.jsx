@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Star from '../components/Star.jsx'
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { PerspectiveCamera, View } from '@react-three/drei'
 import GraduationHat from '../components/GraduationHat.jsx'
 import Diamond from '../components/Diamond.jsx'
 import Award from '../components/Award.jsx'
@@ -67,23 +67,18 @@ const RichDescription = ({ segments }) => (
     </>
 )
 
-const IconTitle = ({ children, title }) => (
+const IconTitle = ({ slotRef, title }) => (
     <div className='flex'>
-        <Canvas className='w-full h-full min-w-12 max-w-20 inline'>
-            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-            {children}
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={2}/>
-        </Canvas>
+        <div ref={slotRef} className='w-full h-20 min-w-12 max-w-20 inline' />
         <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal'>
             {title}
         </p>
     </div>
 )
 
-const AboutSection = ({ children, title, items }) => (
+const AboutSection = ({ slotRef, title, items }) => (
     <div>
-        <IconTitle title={title}>{children}</IconTitle>
+        <IconTitle slotRef={slotRef} title={title} />
         <AboutList items={items} />
     </div>
 )
@@ -95,6 +90,14 @@ const NameBirthField = ({ label, value }) => (
     </div>
 )
 
+const IconLights = () => (
+    <>
+        <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+        <ambientLight intensity={1} />
+        <directionalLight position={[10, 10, 10]} intensity={2} />
+    </>
+)
+
 const About = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })
     const isMobile = useMediaQuery({ maxWidth: 768 })
@@ -102,6 +105,10 @@ const About = () => {
 
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
     const aboutRef = useRef(null)
+    const starRef = useRef(null)
+    const hatRef = useRef(null)
+    const diamondRef = useRef(null)
+    const awardRef = useRef(null)
     const { t } = useLanguage();
 
     useEffect(() => {
@@ -127,7 +134,7 @@ const About = () => {
     const competitionList = t('about.competitionList');
 
     return (
-        <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
+        <section id='about' ref={aboutRef} className='relative bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
             <h1 className='head-text'>{t('about.title')}</h1>
             <div className='grid grid-cols-1 sm:p-8'>
                 <div className='flex sm:flex-row flex-col gap-8 items-center'>
@@ -145,9 +152,7 @@ const About = () => {
 
                 <div className='sm:ml-10'>
                     <div className='skill'>
-                        <IconTitle title={t('about.skills')}>
-                            <Star scale={sizes.starScale} />
-                        </IconTitle>
+                        <IconTitle slotRef={starRef} title={t('about.skills')} />
                         <div className='flex flex-col gap-5 md:gap-20 md:flex-row'>
                             <div>
                                 <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>{t('about.programmingLanguages')}</p>
@@ -160,19 +165,34 @@ const About = () => {
                         </div>
                     </div>
 
-                    <AboutSection title={t('about.education')} items={educationList}>
-                        <GraduationHat scale={sizes.hatScale} rotation={[Math.PI / 8, 0, 0]} />
-                    </AboutSection>
-
-                    <AboutSection title={t('about.workExperience')} items={workList}>
-                        <Diamond scale={sizes.diamondScale} />
-                    </AboutSection>
-
-                    <AboutSection title={t('about.competitionExperience')} items={competitionList}>
-                        <Award scale={sizes.awardScale} />
-                    </AboutSection>
+                    <AboutSection slotRef={hatRef} title={t('about.education')} items={educationList} />
+                    <AboutSection slotRef={diamondRef} title={t('about.workExperience')} items={workList} />
+                    <AboutSection slotRef={awardRef} title={t('about.competitionExperience')} items={competitionList} />
                 </div>
             </div>
+
+            <Canvas
+                className='pointer-events-none'
+                style={{ position: 'absolute', inset: 0 }}
+                eventSource={aboutRef}
+            >
+                <View index={1} track={starRef}>
+                    <IconLights />
+                    <Star scale={sizes.starScale} />
+                </View>
+                <View index={2} track={hatRef}>
+                    <IconLights />
+                    <GraduationHat scale={sizes.hatScale} rotation={[Math.PI / 8, 0, 0]} />
+                </View>
+                <View index={3} track={diamondRef}>
+                    <IconLights />
+                    <Diamond scale={sizes.diamondScale} />
+                </View>
+                <View index={4} track={awardRef}>
+                    <IconLights />
+                    <Award scale={sizes.awardScale} />
+                </View>
+            </Canvas>
         </section>
     )
 }

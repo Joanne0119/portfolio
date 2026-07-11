@@ -32,8 +32,8 @@ export const translations = {
       education: 'Education',
       workExperience: 'Work Experience',
       competitionExperience: 'Competition Experience',
-      code: ['HTML', 'CSS', 'JavaScript', 'Swift/SwiftUI', 'Python', 'C/C++'],
-      tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
+      code: ['HTML', 'CSS', 'JavaScript', 'Swift/SwiftUI', 'Python', 'C/C++', 'C#'],
+      tools: ['React', 'Vite', 'TailwindCSS', 'Framer Motion', 'Unity', 'WebSocket / WebRTC', 'GitHub'],
       educationList: [
         { name: 'National Taipei University of Education - Department of Digital Technology Design', degree: 'BS', date: '2022.09 - 2026.06' },
         { name: 'National Sun Yat-sen University - Department of Computer Science and Engineering', degree: 'MS', date: '2026.09 - Present' },
@@ -114,7 +114,7 @@ export const translations = {
     },
     hero: {
       greeting: '哈囉！我是 Joanne',
-      subtitle: '我是一位創意的工程師師與設計師',
+      subtitle: '我是一位有創意的工程師與設計師',
       cta: '聯絡我',
     },
     about: {
@@ -138,8 +138,8 @@ export const translations = {
       education: '學歷',
       workExperience: '工作經歷',
       competitionExperience: '比賽經歷',
-      code: ['HTML', 'CSS', 'JavaScript', 'Swift / SwiftUI', 'Python', 'C / C++'],
-      tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
+      code: ['HTML', 'CSS', 'JavaScript', 'Swift / SwiftUI', 'Python', 'C / C++', 'C#'],
+      tools: ['React', 'Vite', 'TailwindCSS', 'Framer Motion', 'Unity', 'WebSocket / WebRTC', 'GitHub'],
       educationList: [
         { name: '國立臺北教育大學 - 數位科技設計學系', degree: '學士', date: '2022.09 - 2026.06' },
         { name: '國立中山大學 - 資訊工程學系', degree: '碩士', date: '2026.09 - 至今' },

@@ -9,78 +9,89 @@ import Preloader from './components/Preloader'
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-const  App = () => {
+const MODELS = [
+  '/models/CodingAvatar.glb',
+  '/models/hiavatar.glb',
+  '/models/phone.glb',
+  '/models/macbook.glb',
+  '/models/Award.glb',
+];
+
+const VIDEOS = [
+  '/projects/toyDemo.mp4',
+  '/projects/toyPhoneDemo.mp4',
+  '/projects/MarketDuckDemo.mp4',
+  '/projects/enSPIREDemo.mp4',
+  '/projects/PortfolioDemo.mp4',
+];
+
+const IMAGES = [
+  '/assets/me.png',
+];
+
+const App = () => {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const totalAssets = 10; // 1 image + 5 3D models + 4 videos
+    const totalAssets = MODELS.length + VIDEOS.length + IMAGES.length;
     let loadedAssets = 0;
-    const assetWeight = 1 / totalAssets;  // Each asset has equal weight
+    const assetWeight = 1 / totalAssets;
 
-    // Function to load the image
     const loadImage = (src) =>
       new Promise((resolve) => {
         const img = new Image();
         img.src = src;
         img.onload = () => {
           loadedAssets += 1;
-          setProgress((loadedAssets / totalAssets) * 100); // Update progress
+          setProgress((loadedAssets / totalAssets) * 100);
+          resolve();
+        };
+        img.onerror = () => {
+          loadedAssets += 1;
+          setProgress((loadedAssets / totalAssets) * 100);
           resolve();
         };
       });
 
-    // Function to load videos
     const loadVideo = (src) =>
       new Promise((resolve) => {
         const video = document.createElement('video');
         video.src = src;
         video.onloadeddata = () => {
           loadedAssets += 1;
-          setProgress((loadedAssets / totalAssets) * 100); // Update progress
+          setProgress((loadedAssets / totalAssets) * 100);
+          resolve();
+        };
+        video.onerror = () => {
+          loadedAssets += 1;
+          setProgress((loadedAssets / totalAssets) * 100);
           resolve();
         };
       });
 
-    // LoadingManager for 3D models
     const loadingManager = new THREE.LoadingManager();
 
     loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
-      // Progress only for the models, adding their weight into the total progress
-      setProgress((loadedAssets + itemsLoaded / itemsTotal) * assetWeight * 100); // Combine image, video, and models
+      setProgress((loadedAssets + itemsLoaded / itemsTotal) * assetWeight * 100);
     };
 
     loadingManager.onLoad = () => {
-      loadedAssets += 5; // All 5 models are loaded
-      setProgress((loadedAssets / totalAssets) * 100); // Final progress update
-      setLoading(false); // All assets loaded
+      loadedAssets += MODELS.length;
+      setProgress((loadedAssets / totalAssets) * 100);
+      setLoading(false);
     };
 
-    // Function to load 3D models
     const load3DModel = (modelPath) =>
       new Promise((resolve) => {
         const loader = new GLTFLoader(loadingManager);
-        loader.load(modelPath, (gltf) => {
-          resolve(gltf);
-        });
+        loader.load(modelPath, (gltf) => resolve(gltf));
       });
 
     const loadAssets = async () => {
-      // Load 5 3D models
-      await load3DModel('/models/CodingAvatar.glb');
-      await load3DModel('/models/hiavatar.glb');
-      await load3DModel('/models/phone.glb');
-      await load3DModel('/models/macbook.glb');
-      await load3DModel('/models/Award.glb');
-
-      // Load the videos first
-      await loadVideo('/projects/WyanMusicDemo.mp4');
-      await loadVideo('/projects/MarketDuckDemo.mp4');
-      await loadVideo('/projects/enSPIREDemo.mp4');
-      await loadVideo('/projects/PortfolioDemo.mp4');
-
-      // Load the image
-      await loadImage('/assets/me.png');
+      for (const path of MODELS) await load3DModel(path);
+      for (const path of VIDEOS) await loadVideo(path);
+      for (const path of IMAGES) await loadImage(path);
     };
 
     loadAssets();

@@ -39,10 +39,10 @@ const Project = () => {
             <div >
             {
                 projectInfo.map((project, idx) => {
-                    const localized = projectList[idx] || { name: '', description: '' };
+                    const localized = projectList[idx] || {};
                     return (
                         <ProjectDetials
-                            currentProject={{ ...project, name: localized.name, description: localized.description }}
+                            currentProject={{ ...project, ...localized }}
                             key={project.id}
                         />
                     );

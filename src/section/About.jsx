@@ -144,22 +144,6 @@ const About = () => {
                 </div>
 
                 <div className='sm:ml-10'>
-                    <div className='skill'>
-                        <IconTitle title={t('about.skills')}>
-                            <Star scale={sizes.starScale} />
-                        </IconTitle>
-                        <div className='flex flex-col gap-5 md:gap-20 md:flex-row'>
-                            <div>
-                                <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>{t('about.programmingLanguages')}</p>
-                                <AboutList items={code}/>
-                            </div>
-                            <div>
-                                <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>{t('about.frameworksAndTools')}</p>
-                                <AboutList items={tools}/>
-                            </div>
-                        </div>
-                    </div>
-
                     <AboutSection title={t('about.education')} items={educationList}>
                         <GraduationHat scale={sizes.hatScale} rotation={[Math.PI / 8, 0, 0]} />
                     </AboutSection>
@@ -171,6 +155,34 @@ const About = () => {
                     <AboutSection title={t('about.competitionExperience')} items={competitionList}>
                         <Award scale={sizes.awardScale} />
                     </AboutSection>
+
+                    <div className='skill'>
+                        <IconTitle title={t('about.skills')}>
+                            <Star scale={sizes.starScale} />
+                        </IconTitle>
+                        <div className='flex flex-col gap-5 md:gap-8 md:flex-row mx-10 mt-2'>
+                            <div className='flex-1'>
+                                <p className='xl:text-lg md:text-lg sm:text-base text-base font-generalsans font-bold text-sky-950 mb-2'>
+                                    {t('about.programmingLanguages')}
+                                </p>
+                                <ul className='flex flex-wrap gap-2'>
+                                    {code.map((name, idx) => (
+                                        <li key={idx} className='skill-li'>{name}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='flex-1'>
+                                <p className='xl:text-lg md:text-lg sm:text-base text-base font-generalsans font-bold text-sky-950 mb-2'>
+                                    {t('about.frameworksAndTools')}
+                                </p>
+                                <ul className='flex flex-wrap gap-2'>
+                                    {tools.map((name, idx) => (
+                                        <li key={idx} className='skill-li'>{name}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -21,6 +21,14 @@ export const projectInfo = [
     },
     {
         id: 2,
+        skills: ['Node.js', 'React', 'LINE Messaging API', 'Google Gemini API', 'MQTT', 'Docker'],
+        texture: '/projects/lockerDemo.mp4',
+        mobileTexture: '/projects/lockerMobile.png',
+        displayType: 'phone-cabinet',
+        background: 'linear-gradient(to bottom right, white, rgb(224 231 255))'
+    },
+    {
+        id: 3,
         skills: ['JavaScript', 'TailwindCSS', 'React', 'motion', 'Redux', 'Firebase'],
         github: 'https://github.com/Joanne0119/lunch_box',
         demoUrl: 'https://heweibox.vercel.app/',
@@ -30,7 +38,7 @@ export const projectInfo = [
         background: 'linear-gradient(to bottom right, white , rgb(252 243 235)'
     },
     {
-        id: 3,
+        id: 4,
         skills: ['SwiftUI', 'Google Maps API'],
         github: 'https://github.com/Joanne0119/Market-Duck',
         demoUrl: 'https://youtu.be/ixhBDF6XOf0',
@@ -40,7 +48,7 @@ export const projectInfo = [
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
     {
-        id: 4,
+        id: 5,
         skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'GSAP'],
         github: 'https://github.com/Joanne0119/portfolio',
         demoUrl: 'https://joanne-porfolio.netlify.app/',
@@ -50,7 +58,7 @@ export const projectInfo = [
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
     {
-        id: 5,
+        id: 6,
         skills: ['SwiftUI', 'ChatGPT API'],
         github: 'https://github.com/dddCrazy87/enSPIRE',
         demoUrl: 'https://youtu.be/MRch09O2lKA',
@@ -75,5 +83,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
       phoneScale: isSmall ? 8 : isMobile ? 10 : 12,
       macbookScaleBoth: isSmall ? 4.2 : isMobile ? 5.4 : 6.2,
       phoneScaleBoth: isSmall ? 6.2 : isMobile ? 7.8 : 9.2,
+      lockerScale: isSmall ? 2.4 : isMobile ? 3.0 : 3.6,
+      phoneWithLockerScale: isSmall ? 5.5 : isMobile ? 7.0 : 8.4,
     }
 }

@@ -1,5 +1,4 @@
 @import url('https://fonts.cdnfonts.com/css/general-sans');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +14,7 @@
 
 body {
   background: rgb(240 249 255);
-  font-family: 'General Sans', 'Noto Sans TC', sans-serif;
+  font-family: 'General Sans', sans-serif;
 }
 
 .card {

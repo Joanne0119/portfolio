@@ -13,14 +13,45 @@ import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const renderMarkdown = (text) => {
+    if (typeof text !== 'string') return text;
+    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, idx) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+            return <span key={idx} className='font-bold'>{part.slice(2, -2)}</span>;
+        }
+        return <React.Fragment key={idx}>{part}</React.Fragment>;
+    });
+};
+
 const AboutList = ({ items }) => (
     <ul className='mx-10'>
-        {items.map((name, idx) => (
-            <li key={idx} className='about-li'>
-                <img src='/assets/dount.png' alt='' className='w-5 h-auto object-contain min-w-5 min-h-5'/>
-                <p>{name}</p>
-            </li>
-        ))}
+        {items.map((item, idx) => {
+            const isString = typeof item === 'string';
+            const text = isString ? item : item.name;
+            const date = isString ? null : item.date;
+            const degree = isString ? null : item.degree;
+            return (
+                <li key={idx} className='about-li'>
+                    <img src='/assets/dount.png' alt='' className='w-5 h-auto object-contain min-w-5 min-h-5 mt-1'/>
+                    <div className='flex-1 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1'>
+                        <div className='flex-1 flex flex-wrap items-baseline gap-2'>
+                            {degree && (
+                                <span className='inline-block bg-sky-950 text-white text-xs font-bold px-2 py-0.5 rounded-md shrink-0 translate-y-[-2px]'>
+                                    {degree}
+                                </span>
+                            )}
+                            <p>{renderMarkdown(text)}</p>
+                        </div>
+                        {date && (
+                            <p className='sm:text-base text-sm text-sky-700 whitespace-nowrap shrink-0 sm:ml-4 sm:mt-1'>
+                                {date}
+                            </p>
+                        )}
+                    </div>
+                </li>
+            );
+        })}
     </ul>
 )
 

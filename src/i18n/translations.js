@@ -35,18 +35,24 @@ export const translations = {
       code: ['HTML', 'CSS', 'JavaScript', 'Swift/SwiftUI', 'Python', 'C/C++'],
       tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
       educationList: [
-        'National Taipei University of Education - Department of Digital Technology Design',
-        'National Sun Yat-sen University - Department of Computer Science and Engineering',
+        { name: 'National Taipei University of Education - Department of Digital Technology Design', degree: 'BS', date: '2022.09 - 2026.06' },
+        { name: 'National Sun Yat-sen University - Department of Computer Science and Engineering', degree: 'MS', date: '2026.09 - Present' },
       ],
       workList: [
-        'Full-stack Engineering Intern at Institute of Information Science, Academia Sinica: Developed an iOS Bluetooth node utility tool & an anomaly detection system',
-        'Front-end Engineering Intern at Genibuilder Technology Co., Ltd.: Developed a cross-platform B2B appointment & customer service application',
+        {
+          name: '**Full-stack Engineering Intern** at Research Center for Information Technology Innovation, Academia Sinica: Developed an **iOS Bluetooth node utility tool** & an **anomaly detection system**',
+          date: '2025.04 - Present'
+        },
+        {
+          name: '**Front-end Engineering Intern** at Genibuilder Technology Co., Ltd.: Developed a **cross-platform B2B appointment & AI customer service application**',
+          date: '2026.01 - Present'
+        },
       ],
       competitionList: [
-        'Winner of the 2026 Vision Get Wild Award for Non-Traditional Games: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
-        'Honorable Mention in the 2026 Original Game Award for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
-        'Finalist in the 2024 MAIC (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan',
-        'Best Technical Award at the 14th OpenHCI Workshop: Developed an VR game using Unity',
+        '**Winner** of the 2026 **Vision Get Wild Award** for Non-Traditional Games: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
+        '**Honorable Mention** in the 2026 **Original Game Award** for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
+        '**Finalist** in the 2024 **MAIC** (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan',
+        '**Best Technical Award** at the 14th **OpenHCI Workshop**: Developed an VR game using Unity',
       ],
     },
     projects: {
@@ -92,7 +98,7 @@ export const translations = {
       error: 'Something went wrong. Please try later.',
     },
     footer: {
-      copyright: '© 2025 Design by Joanne Liu',
+      copyright: '© 2026 Designed by Joanne Liu',
     },
     language: {
       toggle: '繁',
@@ -134,16 +140,25 @@ export const translations = {
       competitionExperience: '比賽經歷',
       code: ['HTML', 'CSS', 'JavaScript', 'Swift / SwiftUI', 'Python', 'C / C++'],
       tools: ['React', 'GitHub', 'TailwindCSS', 'Unity'],
-      educationList: ['國立臺北教育大學 - 數位科技設計學系', '國立中山大學 - 資訊工程學系'],
+      educationList: [
+        { name: '國立臺北教育大學 - 數位科技設計學系', degree: '學士', date: '2022.09 - 2026.06' },
+        { name: '國立中山大學 - 資訊工程學系', degree: '碩士', date: '2026.09 - 至今' },
+      ],
       workList: [
-        '中央研究院資訊科技創新研究中心 全端工程實習生：開發 iOS 藍牙節點工具與異常偵測系統',
-        '沛智科技股份有限公司 前端工程實習生：開發跨平台 B2B 預約與客服應用程式'
+        {
+          name: '中央研究院資訊科技創新研究中心 **全端工程實習生**：開發 **iOS 藍牙節點工具**與**異常偵測系統**',
+          date: '2025.04 - 至今'
+        },
+        {
+          name: '沛智科技股份有限公司 **前端工程實習生**：開發**跨平台 B2B 預約與 AI 客服應用程式**',
+          date: '2026.01 - 至今'
+        }
       ],
       competitionList: [
-        '2026 放視大賞 遊戲類 非典型遊戲組 金獎：開發用手機作為遙控器的多人派對遊戲',
-        '2026 原創遊戲大賞 校園組 佳作：開發用手機作為遙控器的多人派對遊戲',
-        '2024 行動應用創新競賽 (MAIC) 決賽入選：開發整合全台市場的 iOS 應用程式',
-        '第 14 屆 OpenHCI 工作坊 最佳技術獎：以 Unity 開發 VR 遊戲',
+        '2026 **放視大賞** 遊戲類 非典型遊戲組 **金獎**：開發用手機作為遙控器的多人派對遊戲',
+        '2026 **原創遊戲大賞** 校園組 **佳作**：開發用手機作為遙控器的多人派對遊戲',
+        '2024 行動應用創新競賽 (**MAIC**) **決賽入選**：開發整合全台市場的 iOS 應用程式',
+        '第 14 屆 **OpenHCI 工作坊** **最佳技術獎**：以 Unity 開發 VR 遊戲',
       ],
     },
     projects: {
@@ -189,7 +204,7 @@ export const translations = {
       error: '發生錯誤，請稍後再試。',
     },
     footer: {
-      copyright: '© 2025 設計：Joanne Liu',
+      copyright: '© 2026 由 Joanne Liu 設計',
     },
     language: {
       toggle: 'EN',

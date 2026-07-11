@@ -95,7 +95,12 @@ const Contact = () => {
                             </li>
                             <li>
                                 <a href='https://www.instagram.com/joanneliu0119/' target='_blank' >
-                                    <img src='/assets/instagram.svg' alt='github' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                    <img src='/assets/instagram.svg' alt='instagram' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='https://www.linkedin.com/in/joanne0119/' target='_blank' rel='noreferrer'>
+                                    <img src='/assets/linkedin.svg' alt='linkedin' className='sm:w-5 h-auto object-contain sm:min-w-5 sm:min-h-5 mx-2 w-4 min-w-4 min-h-4'/>
                                 </a>
                             </li>
 

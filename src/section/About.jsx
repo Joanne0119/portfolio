@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { aboutCode, aboutTools, aboutEducation, aboutExperience } from '../constant/index.js'
 import Star from '../components/Star.jsx'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
@@ -9,23 +8,32 @@ import { calculateSizes } from '../constant/index.js'
 import { useMediaQuery } from 'react-responsive'
 import gsap from 'gsap'
 import  { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const AboutItems = (aboutItems) => {
-    return (
-        <ul className='mx-10'>
-            {
-                aboutItems.aboutItems.map((item) => (
-                    <li key={item.id} className='about-li'>
-                        <img src='/assets/dount.png' alt='' className='w-5 h-auto object-contain min-w-5 min-h-5'/>
-                        <p>{ item.name }</p>
-                    </li>
-                ))
-            }
-        </ul>
-    )
-}
+const AboutList = ({ items }) => (
+    <ul className='mx-10'>
+        {items.map((name, idx) => (
+            <li key={idx} className='about-li'>
+                <img src='/assets/dount.png' alt='' className='w-5 h-auto object-contain min-w-5 min-h-5'/>
+                <p>{name}</p>
+            </li>
+        ))}
+    </ul>
+)
+
+const RichDescription = ({ segments }) => (
+    <>
+        {segments.map((seg, idx) =>
+            seg.bold ? (
+                <span key={idx} className='font-bold'>{seg.text}</span>
+            ) : (
+                <React.Fragment key={idx}>{seg.text}</React.Fragment>
+            )
+        )}
+    </>
+)
 
 const About = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 })
@@ -34,12 +42,13 @@ const About = () => {
 
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
     const aboutRef = useRef(null)
+    const { t } = useLanguage();
+
     useEffect(() => {
         const about = aboutRef.current;
-
-          gsap.fromTo(about, 
-            { y: -100 },  
-            { y: 0, duration: 1, ease: 'power3.out', 
+          gsap.fromTo(about,
+            { y: -100 },
+            { y: 0, duration: 1, ease: 'power3.out',
               scrollTrigger: {
                 trigger: about,
                 start: 'top-=150 bottom-=100',
@@ -50,10 +59,15 @@ const About = () => {
           );
     }, [])
 
+    const description = t('about.description');
+    const code = t('about.code');
+    const tools = t('about.tools');
+    const educationList = t('about.educationList');
+    const experienceList = t('about.experienceList');
 
     return (
         <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
-        <h1 className='head-text'>About</h1>
+        <h1 className='head-text'>{t('about.title')}</h1>
         <div className='grid grid-cols-1 sm:p-8'>
             <div className='flex sm:flex-row flex-col gap-8 items-center'>
                 <div className='h-auto max-h-60 min-h-32 min-w-32 rounded-lg overflow-hidden'>
@@ -61,15 +75,15 @@ const About = () => {
                 </div>
                 <div className='sm:inline-flex sm:gap-10 flex-row'>
                     <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold mb-4'>
-                        <span className='font-medium'>Name:</span> 
-                        <br/>Cheng En, Liu (Joanne)</p>
+                        <span className='font-medium'>{t('about.nameLabel')}</span>
+                        <br/>{t('about.nameValue')}</p>
                     <p className='xl:text-xl md:text-xl sm:text-lg text-lg text-sky-950 font-generalsans font-bold mb-4'>
-                        <span className='font-medium'>Birth:</span>
-                        <br/> January 19, 2004</p>
+                        <span className='font-medium'>{t('about.birthLabel')}</span>
+                        <br/> {t('about.birthValue')}</p>
                 </div>
             </div>
             <div className='sm:py-10 sm:px-6 py-5 px-2 text-balance xl:text-lg md:text-lg sm:text-md text-md font-generalsans text-left text-sky-950'>
-                I am Joanne, a proactive <span className='font-bold'>full-stack developer</span> experienced in building interactive web and mobile applications. <span className='font-bold'>Skilled in front-end technologies like JavaScript, React, and CSS</span> , I also integrate <span className="font-bold">back-end systems, IoT devices, and real-time data flows</span> to create practical, user-centered solutions. I enjoy turning complex technical challenges into functional and engaging applications.
+                <RichDescription segments={description} />
             </div>
         <div>
         <div className='sm:ml-10'>
@@ -82,21 +96,21 @@ const About = () => {
                         />
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
-                    
+
                     </Canvas>
-                    
+
                     <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal  pr-20'>
-                        Skills
+                        {t('about.skills')}
                     </p>
                 </div>
                 <div className='flex flex-col gap-5 md:gap-20 md:flex-row'>
                     <div>
-                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>Programming Languages</p>
-                        <AboutItems aboutItems={aboutCode}/>
+                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>{t('about.programmingLanguages')}</p>
+                        <AboutList items={code}/>
                     </div>
                     <div>
-                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>Frameworks & Tools</p>
-                        <AboutItems aboutItems={aboutTools}/>
+                        <p className='inline xl:text-xl md:text-xl sm:text-lg text-lg font-generalsans font-bold text-sky-950 pl-10'>{t('about.frameworksAndTools')}</p>
+                        <AboutList items={tools}/>
                     </div>
                 </div>
             </div>
@@ -104,41 +118,41 @@ const About = () => {
                 <div className=' flex'>
                     <Canvas className='w-full h-full  min-w-12 max-w-20 inline'>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                        <GraduationHat 
+                        <GraduationHat
                             scale={sizes.hatScale}
                             rotation={[Math.PI / 8, 0, 0]}
                         />
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
-                    
+
                     </Canvas>
                     <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
-                        Education
+                        {t('about.education')}
                     </p>
                 </div>
-                <AboutItems aboutItems={aboutEducation}/>
+                <AboutList items={educationList}/>
             </div>
             <div>
                 <div className=' flex'>
                     <Canvas className='w-full h-full  min-w-12 max-w-20 inline'>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                        <Diamond 
+                        <Diamond
                             scale={sizes.diamondScale}
                         />
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
-                    
+
                     </Canvas>
                     <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal '>
-                        Experience
+                        {t('about.experience')}
                     </p>
                 </div>
-                <AboutItems aboutItems={aboutExperience}/>
+                <AboutList items={experienceList}/>
             </div>
             </div>
         </div>
-            
-            
+
+
         </div>
         </section>
     )

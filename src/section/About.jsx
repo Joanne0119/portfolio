@@ -25,7 +25,7 @@ const renderMarkdown = (text) => {
 };
 
 const AboutList = ({ items }) => (
-    <ul className='mx-10'>
+    <ul className='sm:mx-10 mx-2'>
         {items.map((item, idx) => {
             const isString = typeof item === 'string';
             const text = isString ? item : item.name;
@@ -33,18 +33,18 @@ const AboutList = ({ items }) => (
             const degree = isString ? null : item.degree;
             return (
                 <li key={idx} className='about-li'>
-                    <img src='/assets/dount.png' alt='' className='w-5 h-auto object-contain min-w-5 min-h-5 mt-1'/>
-                    <div className='flex-1 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1'>
-                        <div className='flex-1 flex flex-wrap items-baseline gap-2'>
+                    <img src='/assets/dount.png' alt='' className='w-4 sm:w-5 h-auto object-contain min-w-4 sm:min-w-5 min-h-4 sm:min-h-5 mt-1.5 sm:mt-2 shrink-0'/>
+                    <div className='flex-1 min-w-0 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1'>
+                        <div className='flex-1 min-w-0 flex flex-wrap items-baseline gap-2'>
                             {degree && (
                                 <span className='inline-block bg-sky-950 text-white text-xs font-bold px-2 py-0.5 rounded-md shrink-0 translate-y-[-2px]'>
                                     {degree}
                                 </span>
                             )}
-                            <p>{renderMarkdown(text)}</p>
+                            <p className='break-words'>{renderMarkdown(text)}</p>
                         </div>
                         {date && (
-                            <p className='sm:text-base text-sm text-sky-700 whitespace-nowrap shrink-0 sm:ml-4 sm:mt-1'>
+                            <p className='sm:text-base text-xs text-sky-700 whitespace-nowrap shrink-0 sm:ml-4 sm:mt-1'>
                                 {date}
                             </p>
                         )}
@@ -127,7 +127,7 @@ const About = () => {
     const competitionList = t('about.competitionList');
 
     return (
-        <section id='about' ref={aboutRef} className='bg-white py-10 px-10 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
+        <section id='about' ref={aboutRef} className='bg-white py-10 sm:px-10 px-4 rounded-xl shadow-xl overflow-hidden sm:mx-16 mx-4'>
             <h1 className='head-text'>{t('about.title')}</h1>
             <div className='grid grid-cols-1 sm:p-8'>
                 <div className='flex sm:flex-row flex-col gap-8 items-center'>
@@ -160,7 +160,7 @@ const About = () => {
                         <IconTitle title={t('about.skills')}>
                             <Star scale={sizes.starScale} />
                         </IconTitle>
-                        <div className='flex flex-col gap-5 md:gap-8 md:flex-row mx-10 mt-2'>
+                        <div className='flex flex-col gap-5 md:gap-8 md:flex-row sm:mx-10 mx-2 mt-2'>
                             <div className='flex-1'>
                                 <p className='xl:text-lg md:text-lg sm:text-base text-base font-generalsans font-bold text-sky-950 mb-2'>
                                     {t('about.programmingLanguages')}

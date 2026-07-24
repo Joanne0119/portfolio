@@ -50,7 +50,7 @@ export const translations = {
       ],
       competitionList: [
         '**Winner** of the 2026 **Vision Get Wild Award** for Non-Traditional Games: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
-        '**Honorable Mention** in the 2026 **Original Game Award** for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
+        '**Honorable Mention** in the 2026 **Original X Awards** for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
         '**Finalist** in the 2024 **MAIC** (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan',
         '**Best Technical Award** at the 14th **OpenHCI Workshop**: Developed an VR game using Unity',
       ],

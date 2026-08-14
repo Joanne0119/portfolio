@@ -21,6 +21,7 @@ export const projectInfo = [
     },
     {
         id: 2,
+        hidden: true,
         skills: ['Node.js', 'React', 'LINE Messaging API', 'Google Gemini API', 'MQTT', 'Docker'],
         texture: '/projects/lockerDemo.mp4',
         mobileTexture: '/projects/lockerMobile.png',

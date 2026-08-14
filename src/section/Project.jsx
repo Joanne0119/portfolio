@@ -39,6 +39,7 @@ const Project = () => {
             <div >
             {
                 projectInfo.map((project, idx) => {
+                    if (project.hidden) return null;
                     const localized = projectList[idx] || {};
                     return (
                         <ProjectDetials

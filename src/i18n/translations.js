@@ -35,8 +35,8 @@ export const translations = {
       code: ['HTML', 'CSS', 'JavaScript', 'Swift/SwiftUI', 'Python', 'C/C++', 'C#'],
       tools: ['React', 'Vite', 'TailwindCSS', 'Framer Motion', 'Unity', 'WebSocket / WebRTC', 'GitHub'],
       educationList: [
-        { name: 'National Taipei University of Education - Department of Digital Technology Design', degree: 'BS', date: '2022.09 - 2026.06' },
-        { name: 'National Sun Yat-sen University - Department of Computer Science and Engineering', degree: 'MS', date: '2026.09 - Present' },
+        { name: 'National Taipei University of Education - Department of Digital Technology Design', degree: 'Bachelor', date: '2022.09 - 2026.06' },
+        { name: 'National Sun Yat-sen University - Department of Computer Science and Engineering', degree: 'Master', date: '2026.09 - Present' },
       ],
       workList: [
         {

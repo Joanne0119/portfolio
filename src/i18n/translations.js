@@ -15,8 +15,6 @@ export const translations = {
       title: 'About',
       nameLabel: 'Name:',
       nameValue: 'Joanne (Cheng En, Liu)',
-      birthLabel: 'Birth:',
-      birthValue: 'January 19, 2004',
       description: [
         { text: 'I am Joanne, a proactive ' },
         { text: 'full-stack developer', bold: true },
@@ -133,8 +131,6 @@ export const translations = {
       title: '關於我',
       nameLabel: '姓名：',
       nameValue: 'Joanne (劉丞恩)',
-      birthLabel: '生日：',
-      birthValue: '2004 年 1 月 19 日',
       description: [
         { text: '我是 Joanne，一位積極主動的' },
         { text: '全端工程師', bold: true },

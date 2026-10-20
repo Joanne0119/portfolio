@@ -136,7 +136,6 @@ const About = () => {
                     </div>
                     <div className='sm:inline-flex sm:gap-10 flex-row'>
                         <NameBirthField label={t('about.nameLabel')} value={t('about.nameValue')} />
-                        <NameBirthField label={t('about.birthLabel')} value={t('about.birthValue')} />
                     </div>
                 </div>
                 <div className='sm:py-10 sm:px-6 py-5 px-2 text-balance xl:text-lg md:text-lg sm:text-md text-md font-generalsans text-left text-sky-950'>

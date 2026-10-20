@@ -120,7 +120,7 @@ export const translations = {
       home: '首頁',
       about: '關於我',
       projects: '作品',
-      contact: '聯絡我',
+      contact: '聯絡方式',
     },
     hero: {
       greeting: '哈囉！我是 Joanne',
@@ -209,7 +209,7 @@ export const translations = {
       ],
     },
     contact: {
-      title: '聯絡我',
+      title: '聯絡方式',
       name: '姓名',
       email: '電子郵件',
       message: '訊息',

@@ -1,4 +1,4 @@
-import { Canvas } from '@react-three/fiber'
+import LazyCanvas from './LazyCanvas.jsx'
 import { OrbitControls,  PerspectiveCamera } from '@react-three/drei'
 import React, { Suspense } from 'react'
 import Macbook from './Macbook.jsx'
@@ -93,7 +93,7 @@ const ProjectDetials = ({currentProject}) => {
             {background: `${currentProject.background}`}
             :{top: `calc(10% + ${currentProject.id * 15 }px) `, background: `${currentProject.background}`}}
     >
-        <Canvas className='w-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
+        <LazyCanvas className='w-full' camera={{ fov: 75, position: [-10, 45, 20]}}>
             <Suspense fallback={<CanvasLoader />}>
                 <PerspectiveCamera makeDefault fov={30} position={[0, 0, 30]} />
                 {renderCanvasContent()}
@@ -102,7 +102,7 @@ const ProjectDetials = ({currentProject}) => {
                 <directionalLight position={[10, 10, -10]} intensity={2}/>
             </Suspense>
             <OrbitControls enableZoom={false} enablePan={true} maxPolarAngle={Math.PI / 2} />
-        </Canvas>
+        </LazyCanvas>
 
         <div className='min-h-80  p-3 flex flex-col justify-between'>
             <div >

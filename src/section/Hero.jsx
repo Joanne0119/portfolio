@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
+import LazyCanvas from '../components/LazyCanvas.jsx'
 import CodingAvatar from '../components/CodingAvatar'
 import { PerspectiveCamera } from '@react-three/drei'
 import { calculateSizes } from '../constant/index.js'
@@ -40,7 +40,7 @@ const Hero = () => {
                 </a>
             </div>
             <div className=' min-w-52'>
-            <Canvas className='w-full h-full min-w-52'>
+            <LazyCanvas className='w-full h-full min-w-52'>
                 <Suspense fallback={<CanvasLoader />}>
                     <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                     <HeroCamera isMobile={isMobile}>
@@ -52,7 +52,7 @@ const Hero = () => {
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={2}/>
                 </Suspense>
-            </Canvas>
+            </LazyCanvas>
             </div>
         </section>
     )

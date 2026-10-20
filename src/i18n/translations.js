@@ -7,7 +7,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      greeting: "Hello I'm Joanne!",
+      greeting: "Hello, I'm Joanne!",
       subtitle: 'A Creative Programmer and Designer',
       cta: 'Get in touch',
     },
@@ -49,8 +49,8 @@ export const translations = {
       competitionList: [
         '**Winner** of the 2026 **Vision Get Wild Award** for Non-Traditional Games: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
         '**Honorable Mention** in the 2026 **Original X Awards** for Campus: Developed a multiplayer motion-controlled party game with a "one screen, many phones" experience',
-        '**Finalist** in the 2024 **MAIC** (Mobile App Innovation Competition): Developed an iOS app that integrates markets across Taiwan',
-        '**Best Technical Award** at the 14th **OpenHCI Workshop**: Developed an VR game using Unity',
+        '**Finalist** in the 2024 **MAIC** (Mobile App Innovation Competition): Developed an iOS app that brings together markets across Taiwan',
+        '**Best Technical Award** at the 14th **OpenHCI Workshop**: Developed a VR game using Unity',
       ],
     },
     projects: {
@@ -62,7 +62,7 @@ export const translations = {
           name: "Toys Don't Move Right",
           role: 'Frontend · Networking · Art Direction',
           description:
-            'A multiplayer motion-controlled party game with a "one screen, many phones" experience — no app to install, no controllers needed. Everyone just scans the QR code on the game screen with their phone and instantly joins the fun. Tilt, tap and swipe your phone to control adorable toy characters in the shared world on screen. Designed for casual gatherings where friends can jump in and play together in seconds.',
+            'A "one screen, many phones" multiplayer party game. No app downloads or controllers needed: players scan the QR code on the big screen, and their phone becomes the controller. Tilt, tap and swipe to move quirky toy characters around a shared world. Built for get-togethers, so anyone can join a round in seconds.',
         },
         {
           name: 'Smart Meal Locker System',
@@ -78,7 +78,7 @@ export const translations = {
         {
           name: 'Market Duck',
           description:
-            'An iOS app that integrates markets across Taiwan. Users can search for markets based on location or category and view detailed information about each market. The app also includes a membership point system to encourage public participation in market culture and incentivize market owners to use the platform.',
+            'An iOS app that brings together markets across Taiwan. Users can search for markets based on location or category and view detailed information about each market. The app also includes a membership point system to encourage public participation in market culture and incentivize market owners to use the platform.',
         },
         {
           name: 'Portfolio',
@@ -120,11 +120,11 @@ export const translations = {
       home: '首頁',
       about: '關於我',
       projects: '作品',
-      contact: '聯絡我',
+      contact: '聯絡方式',
     },
     hero: {
       greeting: '哈囉！我是 Joanne',
-      subtitle: '有創意的工程師 × 設計師',
+      subtitle: '工程師 × 設計師',
       cta: '聯絡我',
     },
     about: {
@@ -132,13 +132,13 @@ export const translations = {
       nameLabel: '姓名：',
       nameValue: 'Joanne (劉丞恩)',
       description: [
-        { text: '我是 Joanne，一位積極主動的' },
+        { text: '我是 Joanne，一名' },
         { text: '全端工程師', bold: true },
-        { text: '，擅長開發互動式的網頁與行動應用程式。我' },
-        { text: '熟悉 JavaScript、React 與 CSS 等前端技術', bold: true },
-        { text: '，同時也能整合' },
-        { text: '後端系統、IoT 裝置與即時資料流', bold: true },
-        { text: '，打造以使用者為核心的實用解決方案。我喜歡把複雜的技術挑戰轉化為兼具功能性與吸引力的作品。' },
+        { text: '，專長是開發互動式網頁與行動 App。前端以 ' },
+        { text: 'JavaScript、React 與 CSS', bold: true },
+        { text: ' 為主，也能串接' },
+        { text: '後端系統、IoT 裝置與即時資料', bold: true },
+        { text: '，做出真正好用的產品。我喜歡把複雜的技術問題，變成好用又好玩的作品。' },
       ],
       skills: '技能',
       programmingLanguages: '程式語言',
@@ -163,9 +163,9 @@ export const translations = {
         }
       ],
       competitionList: [
-        '2026 **放視大賞** 遊戲類 非典型遊戲組 **金獎**：開發用手機作為遙控器的多人派對遊戲',
-        '2026 **原創遊戲大賞** 校園組 **佳作**：開發用手機作為遙控器的多人派對遊戲',
-        '2024 行動應用創新競賽 (**MAIC**) **決賽入選**：開發整合全台市場的 iOS 應用程式',
+        '2026 **放視大賞** 遊戲類 非典型遊戲組 **金獎**：以手機當遙控器的多人派對遊戲',
+        '2026 **原創遊戲大賞** 校園組 **佳作**：以手機當遙控器的多人派對遊戲',
+        '2024 行動應用創新競賽 (**MAIC**) **決賽入選**：整合全台市集資訊的 iOS App',
         '第 14 屆 **OpenHCI 工作坊** **最佳技術獎**：以 Unity 開發 VR 遊戲',
       ],
     },
@@ -176,9 +176,9 @@ export const translations = {
       list: [
         {
           name: '不會動的玩具才正常吧',
-          role: '負責前端、連線、美術設計',
+          role: '前端・連線・美術',
           description:
-            '一款主打「一台電腦、多支手機」的多人派對遊戲：不用下載 App、不需要任何遊戲手把，玩家只要用手機掃描電腦畫面上的 QR Code 就能立刻加入。透過傾斜、點擊與滑動手機，操控畫面上可愛的玩具角色一起同樂。專為朋友聚會設計，幾秒內就能加入房間開玩。',
+            '「一個螢幕、多支手機」的多人派對遊戲。不用下載 App，也不用手把，掃描畫面上的 QR Code 就能加入。傾斜、點擊、滑動手機，操控畫面裡的玩具角色和朋友一起玩。適合聚會時拿出來，幾秒就能開局。',
         },
         {
           name: '智慧取餐櫃系統',
@@ -189,27 +189,27 @@ export const translations = {
         {
           name: '盒味盒子',
           description:
-            '一個互動式的 3D 便當客製化網站，使用者可以註冊、瀏覽食材、設計專屬便當，並將自己的作品儲存到帳號中。',
+            '互動式 3D 便當客製化網站。註冊後可以瀏覽食材、組出專屬便當，並把作品存到自己的帳號。',
         },
         {
           name: 'Market Duck',
           description:
-            '一款整合全台市場的 iOS 應用程式，使用者可以依位置或分類搜尋市場並查看詳細資訊。App 內建會員點數系統，鼓勵民眾參與市場文化，也吸引市場業者加入平台。',
+            '整合全台市集資訊的 iOS App，可以依地點或類別搜尋市集、查看詳細資訊。內建會員點數機制，鼓勵大家逛市集，也吸引市集主辦單位加入平台。',
         },
         {
           name: '個人作品集',
           description:
-            '一個結合 3D 元素與互動效果的個人作品集網站，呈現我的個人資訊、作品與經歷，展現我的風格、創意與技術能力。',
+            '用 3D 元素和互動效果打造的個人作品集，介紹我的經歷與作品，也展現我的設計風格與技術。',
         },
         {
           name: 'enSPIRE',
           description:
-            '一款協助使用者發想新點子的 iOS 應用程式，主要功能是透過 AI 提問幫助使用者激發靈感，並以心智圖呈現。App 也包含腦力激盪聊天室以及作品靈感畫廊。',
+            '幫助發想點子的 iOS App。AI 會一步步提問，引導你找到靈感，並整理成心智圖。另外還有一起腦力激盪的聊天室，以及分享創作的靈感畫廊。',
         },
       ],
     },
     contact: {
-      title: '聯絡我',
+      title: '聯絡方式',
       name: '姓名',
       email: '電子郵件',
       message: '訊息',

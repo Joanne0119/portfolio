@@ -113,6 +113,8 @@ export const translations = {
     },
     preloader: {
       loading: 'Loading...',
+      ready: 'All set!',
+      enter: 'Enter site',
     },
   },
   zh: {
@@ -229,6 +231,8 @@ export const translations = {
     },
     preloader: {
       loading: '載入中…',
+      ready: '載入完成！',
+      enter: '進入網站',
     },
   },
 };

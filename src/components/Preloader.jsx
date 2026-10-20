@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
-const Preloader = () => {
+const Preloader = ({ progress = 0, ready = false, leaving = false, onEnter }) => {
   const isMobile = useMediaQuery({ maxWidth: 768 })
   const { t } = useLanguage();
   const [gameOver, setGameOver] = useState(true);
@@ -48,6 +48,10 @@ const Preloader = () => {
     document.addEventListener('click', handleClick);
 
     const handleKeyDown = (event) => {
+      if(ready && event.code === 'Enter') {
+        onEnter?.();
+        return;
+      }
       if(gameOver) {
         gameInit();
       }
@@ -102,10 +106,21 @@ const Preloader = () => {
     }
   }
 
+  // Only skip straight to the site if the visitor never started a game;
+  // otherwise wait for them to press the enter button.
+  useEffect(() => {
+    if(ready && showInit) onEnter?.();
+  }, [ready, showInit])
+
+  // Save on game over: the collision interval below closes over the first
+  // render's score, and visitors may now leave without starting a new round.
+  useEffect(() => {
+    if(gameOver) updateHighScore();
+  }, [gameOver])
+
   useEffect(() => {
     const collisionInterval = setInterval(() => {
       if(collisionObstacle()) {
-        updateHighScore();
         setGameOver(true);
         setShowPlayAgain(true);
       }
@@ -138,7 +153,7 @@ const Preloader = () => {
 
 
   return (
-    <div id='preloader' className='flex flex-col justify-center items-center'>
+    <div id='preloader' className={`flex flex-col justify-center items-center transition-opacity duration-500 ${leaving ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       {/* <iframe className='loader' src="https://lottie.host/embed/c918fc5f-6517-48cf-9b0a-279871ed45f1/CyjVieM6rD.json"></iframe> */}
       <div id='gameplay' ref={gameRef}>
         <p className='absolute top-1/3 right-5 text-sky-950 sm:text-md text-sm gap-4 flex flex-row'><span>Score: {score}</span><span>High Score: {highScore}</span></p>
@@ -148,7 +163,27 @@ const Preloader = () => {
             <img src={`${showInit ? '/assets/play.svg' : '/assets/rotate_arrow.svg'}`} alt='playagain' className='w-10 h-10 p-1' />
         </button>
       </div>
-      <p className='text-sky-950 text-xl font-generalsans font-bold mt-5'>{t('preloader.loading')}</p>
+      <div id='loading-bar' className='mt-6 h-2 rounded-full bg-sky-100 overflow-hidden'>
+        <div className='h-full bg-sky-500 rounded-full transition-[width] duration-300 ease-out' style={{ width: `${progress}%` }}></div>
+      </div>
+      <div className='h-14 mt-3 flex items-center justify-center'>
+        {ready ? (
+          <button
+            onClick={(e) => {
+              // keep the document click handler from starting another round
+              e.stopPropagation();
+              onEnter?.();
+            }}
+            className='text-white text-lg bg-sky-950 px-6 py-2 rounded-full font-generalsans font-medium hover:bg-sky-800 transition-colors'
+          >
+            {t('preloader.ready')} {t('preloader.enter')} →
+          </button>
+        ) : (
+          <p className='text-sky-950 text-xl font-generalsans font-bold'>
+            {t('preloader.loading')} {Math.round(progress)}%
+          </p>
+        )}
+      </div>
     </div>
   )
 }

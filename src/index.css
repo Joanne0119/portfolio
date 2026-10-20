@@ -106,6 +106,10 @@ body {
   height: 100px;
 }
 
+#loading-bar {
+  width: 480px;
+}
+
 #gameplay {
   position: relative;
   width: 480px;
@@ -157,6 +161,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  #loading-bar {
+    width: 220px;
+  }
   #gameplay {
     width: 220px;
     height: 180px;

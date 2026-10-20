@@ -132,7 +132,7 @@ const About = () => {
             <div className='grid grid-cols-1 sm:p-8'>
                 <div className='flex sm:flex-row flex-col gap-8 items-center'>
                     <div className='h-auto max-h-60 min-h-32 min-w-32 rounded-lg overflow-hidden'>
-                        <img className='rounded-xl w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='/assets/me.png' alt=''/>
+                        <img className='rounded-xl w-auto h-full max-h-60 min-h-32 min-w-32 object-cover' src='/assets/me.webp' alt=''/>
                     </div>
                     <div className='sm:inline-flex sm:gap-10 flex-row'>
                         <NameBirthField label={t('about.nameLabel')} value={t('about.nameValue')} />

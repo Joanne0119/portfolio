@@ -8,7 +8,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const DEFAULT_URL =
-  'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioDemo.mp4'
+  '/projects/PortfolioDemo.mp4'
 
 const isVideoUrl = (url) => /\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(url || '')
 

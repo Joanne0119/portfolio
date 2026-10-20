@@ -13,7 +13,7 @@ export const projectInfo = [
         demoUrl: 'https://toys-dont-move-right.vercel.app/',
         videoDemo: 'https://youtu.be/ji9oFNMD3R4?si=iK08s7kwGFNCzm9N',
         texture: '/projects/toyDemo.mp4',
-        mobileTexture: '/projects/toyMobile.png',
+        mobileTexture: '/projects/toyMobile.jpg',
         phoneTexture: '/projects/toyPhoneDemo.mp4',
         phoneMobileTexture: '/projects/toyPhoneMobile.jpg',
         displayType: 'both',
@@ -33,8 +33,8 @@ export const projectInfo = [
         skills: ['JavaScript', 'TailwindCSS', 'React', 'motion', 'Redux', 'Firebase'],
         github: 'https://github.com/Joanne0119/lunch_box',
         demoUrl: 'https://heweibox.vercel.app/',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/heweiDemoMobile.jpg',
+        texture: '/projects/heweiDemo.mp4',
+        mobileTexture: '/projects/heweiDemoMobile.jpg',
         displayType: 'macbook',
         background: 'linear-gradient(to bottom right, white , rgb(252 243 235)'
     },
@@ -43,8 +43,8 @@ export const projectInfo = [
         skills: ['SwiftUI', 'Google Maps API'],
         github: 'https://github.com/Joanne0119/Market-Duck',
         demoUrl: 'https://youtu.be/ixhBDF6XOf0',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/MarketDuckDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/MarketDuckMobile.jpg',
+        texture: '/projects/MarketDuckDemo.mp4',
+        mobileTexture: '/projects/MarketDuckMobile.jpg',
         displayType: 'phone',
         background: 'linear-gradient(to bottom right, white , rgb(255 251 235))'
     },
@@ -53,8 +53,8 @@ export const projectInfo = [
         skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'GSAP'],
         github: 'https://github.com/Joanne0119/portfolio',
         demoUrl: 'https://joanneliu-portfolio.netlify.app/',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/PortfolioMobile.jpg',
+        texture: '/projects/PortfolioDemo.mp4',
+        mobileTexture: '/projects/PortfolioMobile.jpg',
         displayType: 'macbook',
         background: 'linear-gradient(to bottom right, white , rgb(186 230 253)'
     },
@@ -63,8 +63,8 @@ export const projectInfo = [
         skills: ['SwiftUI', 'ChatGPT API'],
         github: 'https://github.com/dddCrazy87/enSPIRE',
         demoUrl: 'https://youtu.be/MRch09O2lKA',
-        texture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/enSPIREDemo.mp4',
-        mobileTexture: 'https://raw.githubusercontent.com/Joanne0119/portfolio/main/public/projects/enSPIREMobile.jpg',
+        texture: '/projects/enSPIREDemo.mp4',
+        mobileTexture: '/projects/enSPIREMobile.jpg',
         displayType: 'phone',
         background: 'rgb(255 255 255)'
     }

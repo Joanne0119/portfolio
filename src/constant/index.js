@@ -52,7 +52,7 @@ export const projectInfo = [
         id: 5,
         skills: ['TailwindCSS', 'JavaScript', 'React', 'Three.js', 'GSAP'],
         github: 'https://github.com/Joanne0119/portfolio',
-        demoUrl: 'https://joanne-porfolio.netlify.app/',
+        demoUrl: 'https://joanneliu-portfolio.netlify.app/',
         texture: '/projects/PortfolioDemo.mp4',
         mobileTexture: '/projects/PortfolioMobile.jpg',
         displayType: 'macbook',

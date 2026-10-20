@@ -40,7 +40,7 @@ export const translations = {
       ],
       workList: [
         {
-          name: '**Full-stack Engineering Intern** at Research Center for Information Technology Innovation, Academia Sinica: Developed an **iOS Bluetooth node utility tool** & an **anomaly detection system**',
+          name: '**Research Assistant** at Research Center for Information Technology Innovation, Academia Sinica: Developed an **iOS Bluetooth node utility tool** & an **anomaly detection system**',
           date: '2025.04 - 2026.08'
         },
         {
@@ -156,7 +156,7 @@ export const translations = {
       ],
       workList: [
         {
-          name: '中央研究院資訊科技創新研究中心 **全端工程實習生**：開發 **iOS 藍牙節點工具**與**異常偵測系統**',
+          name: '中央研究院資訊科技創新研究中心 **研究助理**：開發 **iOS 藍牙節點工具**與**異常偵測系統**',
           date: '2025.04 - 2026.08'
         },
         {

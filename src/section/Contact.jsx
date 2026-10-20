@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
+import LazyCanvas from '../components/LazyCanvas.jsx'
 import HiAvatar from '../components/HiAvatar'
 import { PerspectiveCamera } from '@react-three/drei'
 import { calculateSizes } from '../constant/index.js'
@@ -133,7 +133,7 @@ const Contact = () => {
                 </form>
             </div>
             <div className=' min-w-52'  onPointerOver={() => setAnimationName('Hi')} onPointerOut={() => setAnimationName('Idel')}>
-                <Canvas className='w-full h-full min-h-96 min-w-52'>
+                <LazyCanvas className='w-full h-full min-h-96 min-w-52'>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                             <HiAvatar
@@ -144,7 +144,7 @@ const Contact = () => {
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2}/>
                     </Suspense>
-                </Canvas>
+                </LazyCanvas>
             </div>
         </div>
 

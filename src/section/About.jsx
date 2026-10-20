@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Star from '../components/Star.jsx'
-import { Canvas } from '@react-three/fiber'
+import LazyCanvas from '../components/LazyCanvas.jsx'
 import { PerspectiveCamera } from '@react-three/drei'
 import GraduationHat from '../components/GraduationHat.jsx'
 import Diamond from '../components/Diamond.jsx'
@@ -69,12 +69,12 @@ const RichDescription = ({ segments }) => (
 
 const IconTitle = ({ children, title }) => (
     <div className='flex'>
-        <Canvas className='w-full h-full min-w-12 max-w-20 inline'>
+        <LazyCanvas className='w-full h-full min-w-12 max-w-20 inline'>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
             {children}
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={2}/>
-        </Canvas>
+        </LazyCanvas>
         <p className='inline content-center xl:text-4xl md:text-4xl sm:text-3xl text-2xl font-generalsans font-bold text-sky-950 !leading-normal'>
             {title}
         </p>

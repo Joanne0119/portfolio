@@ -15,41 +15,61 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const SETTLE_MS = 500;
 // Never trap visitors on the preloader if an asset hangs.
 const MAX_LOADING_MS = 30000;
+// Matches the preloader's fade-out duration.
+const FADE_MS = 500;
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [ready, setReady] = useState(false);
+  const [entered, setEntered] = useState(false);
+  const [preloaderMounted, setPreloaderMounted] = useState(true);
+  const [shownProgress, setShownProgress] = useState(0);
   const { active, progress, total } = useProgress();
   const { switching } = useLanguage();
 
   useEffect(() => {
-    if (!loading || active || total === 0 || progress < 100) return;
-    const t = setTimeout(() => setLoading(false), SETTLE_MS);
+    if (ready || active || total === 0 || progress < 100) return;
+    const t = setTimeout(() => setReady(true), SETTLE_MS);
     return () => clearTimeout(t);
-  }, [loading, active, progress, total]);
+  }, [ready, active, progress, total]);
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), MAX_LOADING_MS);
+    const t = setTimeout(() => setReady(true), MAX_LOADING_MS);
     return () => clearTimeout(t);
   }, []);
 
+  // useProgress drops back whenever new assets join the queue; keep the bar
+  // moving forward and hold it short of full until loading has settled.
   useEffect(() => {
-    if (loading) {
+    setShownProgress((prev) => (ready ? 100 : Math.max(prev, Math.min(progress, 99))));
+  }, [progress, ready]);
+
+  useEffect(() => {
+    if (!entered) {
       document.body.style.overflow = 'hidden';
       return;
     }
     document.body.style.overflow = '';
     window.scrollTo(0, 0);
     ScrollTrigger.refresh();
-  }, [loading]);
+    const t = setTimeout(() => setPreloaderMounted(false), FADE_MS);
+    return () => clearTimeout(t);
+  }, [entered]);
 
   return (
     <main>
-      {loading && <Preloader/>}
+      {preloaderMounted && (
+        <Preloader
+          progress={shownProgress}
+          ready={ready}
+          leaving={entered}
+          onEnter={() => setEntered(true)}
+        />
+      )}
       {/* Mounted behind the preloader so every canvas loads its assets up front. */}
       <div
-        aria-hidden={loading}
+        aria-hidden={!entered}
         className={`transition-opacity ease-out ${
-          loading ? 'opacity-0 pointer-events-none' : switching ? 'duration-200 opacity-0' : 'duration-500 opacity-100'
+          !entered ? 'opacity-0 pointer-events-none' : switching ? 'duration-200 opacity-0' : 'duration-500 opacity-100'
         }`}
       >
         <Navbar />

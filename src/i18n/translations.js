@@ -39,7 +39,7 @@ export const translations = {
       workList: [
         {
           name: '**Research Assistant** at Research Center for Information Technology Innovation, Academia Sinica: Developed an **iOS Bluetooth node utility tool** & an **anomaly detection system**',
-          date: '2025.04 - 2026.08'
+          date: '2025.04 - Present'
         },
         {
           name: '**Front-end Engineering Intern** at Genibuilder Technology Co., Ltd.: Developed a **cross-platform B2B appointment & AI customer service application**',
@@ -155,7 +155,7 @@ export const translations = {
       workList: [
         {
           name: '中央研究院資訊科技創新研究中心 **研究助理**：開發 **iOS 藍牙節點工具**與**異常偵測系統**',
-          date: '2025.04 - 2026.08'
+          date: '2025.04 - 至今'
         },
         {
           name: '沛智科技股份有限公司 **前端工程實習生**：開發**跨平台 B2B 預約與 AI 客服應用程式**',
